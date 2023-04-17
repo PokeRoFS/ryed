@@ -1,0 +1,2 @@
+LittlerootTown_SiblingRoom_MapScripts::
+	.byte 0

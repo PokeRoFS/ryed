@@ -1,0 +1,55 @@
+raw `
+.set LOCALID_RIVAL, 2
+DreamWorld1_MapScripts::
+	.byte 0
+`
+
+script InitContinued_Confusion {
+	lockall
+	msgbox("Endless hallways... What's the point?")
+	setvar(VAR_TEMP_0, 1)
+	releaseall
+}
+
+script InitConfused_Ball {
+	lockall
+	msgbox("A pokeball?\p This is cool I wish they were real...")
+	call(Rival_Movement)
+}
+
+script Rival_Surprised {
+	applymovement(LOCALID_RIVAL,Common_Movement_ExclamationMark)
+	applymovement(LOCALID_RIVAL,Common_Movement_FacePlayer)
+}
+
+script Rival_Movement {
+	call(Rival_Surprised)
+	waitmovement(0)
+	call(Hide_Ball)
+	setflag(FLAG_HIDE_DREAM_POKEBALL)
+	applymovement(LOCALID_RIVAL, Rival_Movement_Data1)
+	waitmovement(0)
+	msgbox("{PLAYER}! Sorry I left my pokeball out!")
+	applymovement(LOCALID_RIVAL, Rival_Movement_Data2)
+	waitmovement(0)
+	removeobject(2)
+	call(Final_Confusion)
+}
+
+script Hide_Ball {
+	removeobject(1)
+}
+
+movement Rival_Movement_Data1 {
+	walk_left
+}
+
+movement Rival_Movement_Data2 {
+	walk_right
+}
+
+script Final_Confusion {
+	msgbox("What the fuck?\p When did they get a pokeball?")
+	setdynamicwarp(MAP_LITTLEROOT_TOWN_SIBLING_ROOM2, 0, 2)
+	releaseall
+}

@@ -1,0 +1,27 @@
+raw `
+LittlerootTown_SiblingRoom2_MapScripts::
+	.byte 0
+`
+
+script CHECKING_TIME {
+	lockall
+	msgbox("Oh wow it's already 5:00\p Time to go!")
+	setvar(VAR_TEMP_0, 1)
+	releaseall
+}
+
+script Dreaming {
+	lockall
+	setvar(VAR_TEMP_0, 0)
+	msgbox("I must've fallen asleep while\p working...\n")
+	msgbox("I should check the time on my computer!\n")
+	if (var(VAR_TEMP_0) < 1) {
+		applymovement(OBJ_EVENT_ID_PLAYER, MOVE_PLAYER)
+		waitmovement(0)
+	}
+	releaseall
+}
+
+movement MOVE_PLAYER {
+	walk_left
+}
