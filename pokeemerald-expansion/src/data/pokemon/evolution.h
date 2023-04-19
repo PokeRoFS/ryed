@@ -120,6 +120,7 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
                                        {EVO_MOVE_TYPE, TYPE_FAIRY, SPECIES_SYLVEON}
                                     #endif
                                        },
+    [SPECIES_JOLTEON]               = {{EVO_MEGA_EVOLUTION, ITEM_JOLTEONITE, SPECIES_JOLTEON_MEGA}},                       
     [SPECIES_PORYGON]               = {{EVO_TRADE_ITEM, ITEM_UPGRADE, SPECIES_PORYGON2}},
     [SPECIES_OMANYTE]               = {{EVO_LEVEL, 40, SPECIES_OMASTAR}},
     [SPECIES_KABUTO]                = {{EVO_LEVEL, 40, SPECIES_KABUTOPS}},
@@ -159,6 +160,7 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
     [SPECIES_YANMA]                 = {{EVO_MOVE, MOVE_ANCIENT_POWER, SPECIES_YANMEGA}},
 #endif
     [SPECIES_WOOPER]                = {{EVO_LEVEL, 20, SPECIES_QUAGSIRE}},
+    [SPECIES_UMBREON]               = {{EVO_MEGA_EVOLUTION, ITEM_UMBREONITE, SPECIES_UMBREON_MEGA}},  
 #if P_GEN_4_POKEMON == TRUE
     [SPECIES_MURKROW]               = {{EVO_ITEM, ITEM_DUSK_STONE, SPECIES_HONCHKROW}},
     [SPECIES_MISDREAVUS]            = {{EVO_ITEM, ITEM_DUSK_STONE, SPECIES_MISMAGIUS}},

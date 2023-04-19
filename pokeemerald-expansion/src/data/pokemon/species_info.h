@@ -21332,6 +21332,28 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .flags = SPECIES_FLAG_MEGA_EVOLUTION,
     },
 
+    [SPECIES_JOLTEON_MEGA] =
+    {
+        .baseHP        = 65,
+        .baseAttack    = 75,
+        .baseDefense   = 78,
+        .baseSpeed     = 140,
+        .baseSpAttack  = 165,
+        .baseSpDefense = 125,
+        .types = { TYPE_ELECTRIC, TYPE_ELECTRIC },
+        .catchRate = 45,
+        .expYield = 284,
+        .evYield_Speed     = 3,
+        .genderRatio = PERCENT_FEMALE(12.5),
+        .eggCycles = 35,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD},
+        .abilities = {ABILITY_GALVANIZE, ABILITY_GALVANIZE},
+        .bodyColor = BODY_COLOR_YELLOW,
+        .noFlip = FALSE,
+    },
+
     [SPECIES_AERODACTYL_MEGA] =
     {
         .baseHP        = 80,
@@ -21422,6 +21444,28 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
         .flags = SPECIES_FLAG_MEGA_EVOLUTION,
+    },
+
+    [SPECIES_UMBREON_MEGA] =
+    {
+        .baseHP        = 95,
+        .baseAttack    = 65,
+        .baseDefense   = 140,
+        .baseSpeed     = 95,
+        .baseSpAttack  = 88,
+        .baseSpDefense = 165,
+        .types = { TYPE_DARK, TYPE_DARK },
+        .catchRate = 45,
+        .expYield = 184,
+        .evYield_SpDefense = 2,
+        .genderRatio = PERCENT_FEMALE(12.5),
+        .eggCycles = 35,
+        .friendship = 35,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD},
+        .abilities = {ABILITY_MULTISCALE, ABILITY_MULTISCALE},
+        .bodyColor = BODY_COLOR_BLACK,
+        .noFlip = FALSE,
     },
 
     [SPECIES_STEELIX_MEGA] =

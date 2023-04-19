@@ -1591,6 +1591,11 @@ static const u8 sGyaradositeDesc[] = _(
     "Gyarados to Mega\n"
     "Evolve in battle.");
 
+static const u8 sJolteoniteDesc[] = _(
+    "This stone enables\n"
+    "Jolteon to Mega\n"
+    "Evolve in battle.");
+
 static const u8 sAerodactyliteDesc[] = _(
     "This stone enables\n"
     "Aerodactyl to Mega\n"
@@ -1604,6 +1609,11 @@ static const u8 sMewtwoniteDesc[] = _(
 static const u8 sAmpharositeDesc[] = _(
     "This stone enables\n"
     "Ampharos to Mega\n"
+    "Evolve in battle.");
+
+static const u8 sUmbreoniteDesc[] = _(
+    "This stone enables\n"
+    "Umbreon to Mega\n"
     "Evolve in battle.");
 
 static const u8 sSteelixiteDesc[] = _(

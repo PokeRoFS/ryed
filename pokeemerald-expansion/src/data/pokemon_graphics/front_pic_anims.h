@@ -9585,6 +9585,12 @@ static const union AnimCmd sAnim_GyaradosMega_1[] =
     ANIMCMD_END,
 };
 
+static const union AnimCmd sAnim_JolteonMega_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
 static const union AnimCmd sAnim_AerodactylMega_1[] =
 {
     ANIMCMD_FRAME(0, 1),
@@ -9604,6 +9610,12 @@ static const union AnimCmd sAnim_MEWTWO_MEGA_Y_1[] =
 };
 
 static const union AnimCmd sAnim_AmpharosMega_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_UmbreonMega_1[] =
 {
     ANIMCMD_FRAME(0, 1),
     ANIMCMD_END,
@@ -11480,10 +11492,12 @@ SINGLE_ANIMATION(GengarMega);
 SINGLE_ANIMATION(KangaskhanMega);
 SINGLE_ANIMATION(PinsirMega);
 SINGLE_ANIMATION(GyaradosMega);
+SINGLE_ANIMATION(JolteonMega);
 SINGLE_ANIMATION(AerodactylMega);
 SINGLE_ANIMATION(MEWTWO_MEGA_X);
 SINGLE_ANIMATION(MEWTWO_MEGA_Y);
 SINGLE_ANIMATION(AmpharosMega);
+SINGLE_ANIMATION(UmbreonMega);
 SINGLE_ANIMATION(SteelixMega);
 SINGLE_ANIMATION(ScizorMega);
 SINGLE_ANIMATION(HeracrossMega);
@@ -12567,10 +12581,12 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     [SPECIES_KANGASKHAN_MEGA] = sAnims_KangaskhanMega,
     [SPECIES_PINSIR_MEGA] = sAnims_PinsirMega,
     [SPECIES_GYARADOS_MEGA] = sAnims_GyaradosMega,
+    [SPECIES_JOLTEON_MEGA] = sAnims_JolteonMega,
     [SPECIES_AERODACTYL_MEGA] = sAnims_AerodactylMega,
     [SPECIES_MEWTWO_MEGA_X] = sAnims_MEWTWO_MEGA_X,
     [SPECIES_MEWTWO_MEGA_Y] = sAnims_MEWTWO_MEGA_Y,
     [SPECIES_AMPHAROS_MEGA] = sAnims_AmpharosMega,
+    [SPECIES_UMBREON_MEGA] = sAnims_UmbreonMega,
     [SPECIES_STEELIX_MEGA] = sAnims_SteelixMega,
     [SPECIES_SCIZOR_MEGA] = sAnims_ScizorMega,
     [SPECIES_HERACROSS_MEGA] = sAnims_HeracrossMega,

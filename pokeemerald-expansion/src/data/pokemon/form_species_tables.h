@@ -254,6 +254,12 @@ static const u16 sGyaradosFormSpeciesIdTable[] = {
     FORM_SPECIES_END,
 };
 
+static const u16 sJolteonFormSpeciesIdTable[] = {
+    SPECIES_JOLTEON,
+    SPECIES_JOLTEON_MEGA,
+    FORM_SPECIES_END,
+};
+
 static const u16 sAerodactylFormSpeciesIdTable[] = {
     SPECIES_AERODACTYL,
     SPECIES_AERODACTYL_MEGA,
@@ -300,6 +306,12 @@ static const u16 sPichuFormSpeciesIdTable[] = {
 static const u16 sAmpharosFormSpeciesIdTable[] = {
     SPECIES_AMPHAROS,
     SPECIES_AMPHAROS_MEGA,
+    FORM_SPECIES_END,
+};
+
+static const u16 sUmbreonFormSpeciesIdTable[] = {
+    SPECIES_UMBREON,
+    SPECIES_UMBREON_MEGA,
     FORM_SPECIES_END,
 };
 

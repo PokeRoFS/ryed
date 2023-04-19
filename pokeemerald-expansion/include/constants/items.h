@@ -369,10 +369,12 @@
 #define ITEM_KANGASKHANITE 301
 #define ITEM_PINSIRITE 302
 #define ITEM_GYARADOSITE 303
+#define ITEM_JOLTEONITE 795
 #define ITEM_AERODACTYLITE 304
 #define ITEM_MEWTWONITE_X 305
 #define ITEM_MEWTWONITE_Y 306
 #define ITEM_AMPHAROSITE 307
+#define ITEM_UMBREONITE 796
 #define ITEM_STEELIXITE 308
 #define ITEM_SCIZORITE 309
 #define ITEM_HERACRONITE 310
@@ -969,7 +971,7 @@
 #define ITEM_GRISEOUS_CORE 793
 #define ITEM_LUSTROUS_GLOBE 794
 
-#define ITEMS_COUNT 795
+#define ITEMS_COUNT 797
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

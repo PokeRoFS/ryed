@@ -4066,6 +4066,10 @@ Cry_GyaradosMega::
 	.incbin "sound/direct_sound_samples/cries/mega_gyarados.bin"
 
 	.align 2
+Cry_JolteonMega::
+	.incbin "sound/direct_sound_samples/cries/jolteon.bin"
+
+	.align 2
 Cry_AerodactylMega::
 	.incbin "sound/direct_sound_samples/cries/mega_aerodactyl.bin"
 
@@ -4080,6 +4084,10 @@ Cry_MewtwoMegaY::
 	.align 2
 Cry_AmpharosMega::
 	.incbin "sound/direct_sound_samples/cries/mega_ampharos.bin"
+
+	.align 2
+Cry_UmbreonMega::
+	.incbin "sound/direct_sound_samples/cries/umbreon.bin"
 
 	.align 2
 Cry_SteelixMega::

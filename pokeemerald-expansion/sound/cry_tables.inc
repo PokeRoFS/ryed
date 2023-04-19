@@ -1452,10 +1452,12 @@ gCryTable::
 	cry Cry_KangaskhanMega
 	cry Cry_PinsirMega
 	cry Cry_GyaradosMega
+	cry Cry_JolteonMega
 	cry Cry_AerodactylMega
 	cry Cry_MewtwoMegaX
 	cry Cry_MewtwoMegaY
 	cry Cry_AmpharosMega
+	cry Cry_UmbreonMega
 	cry Cry_SteelixMega
 	cry Cry_ScizorMega
 	cry Cry_HeracrossMega
@@ -3574,10 +3576,12 @@ gCryTable_Reverse::
 	cry_reverse Cry_KangaskhanMega
 	cry_reverse Cry_PinsirMega
 	cry_reverse Cry_GyaradosMega
+	cry_reverse Cry_JolteonMega
 	cry_reverse Cry_AerodactylMega
 	cry_reverse Cry_MewtwoMegaX
 	cry_reverse Cry_MewtwoMegaY
 	cry_reverse Cry_AmpharosMega
+	cry_reverse Cry_UmbreonMega
 	cry_reverse Cry_SteelixMega
 	cry_reverse Cry_ScizorMega
 	cry_reverse Cry_HeracrossMega

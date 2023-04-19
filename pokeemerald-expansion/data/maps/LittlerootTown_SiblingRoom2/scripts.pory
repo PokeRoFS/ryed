@@ -6,16 +6,26 @@ LittlerootTown_SiblingRoom2_MapScripts::
 script CHECKING_TIME {
 	lockall
 	msgbox("Oh wow it's already 5:00\p Time to go!")
-	setvar(VAR_TEMP_0, 1)
+	msgbox("Can't forget my lucky items!\n")
+	if (!flag(CHECKED_TIME)){
+		finditem(ITEM_JOLTEONITE)
+		finditem(ITEM_MEGA_RING)
+		finditem(ITEM_THUNDER_STONE)
+		setvar(VAR_LITTLEROOT_INTRO_STATE, 7)
+		setflag(FLAG_SET_WALL_CLOCK)
+		setflag(FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_1)
+		setflag(FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_2)
+		setflag(CHECKED_TIME)
+		setflag(FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_TRUCK)
+	}
 	releaseall
 }
 
 script Dreaming {
 	lockall
-	setvar(VAR_TEMP_0, 0)
-	msgbox("I must've fallen asleep while\p working...\n")
-	msgbox("I should check the time on my computer!\n")
-	if (var(VAR_TEMP_0) < 1) {
+	if (!flag(CHECKED_TIME)) {
+		msgbox("I must've fallen asleep while\p working...\n")
+		msgbox("I should check the time on my computer!\n")
 		applymovement(OBJ_EVENT_ID_PLAYER, MOVE_PLAYER)
 		waitmovement(0)
 	}

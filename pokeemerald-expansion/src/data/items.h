@@ -4017,6 +4017,19 @@ const struct Item gItems[] =
         .flingPower = 80,
     },
 
+    [ITEM_JOLTEONITE] =
+    {
+        .name = _("Jolteonite"),
+        .itemId = ITEM_JOLTEONITE,
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = sJolteoniteDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+    },
+
     [ITEM_AERODACTYLITE] =
     {
         .name = _("Aerodactylite"),
@@ -4063,6 +4076,19 @@ const struct Item gItems[] =
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sAmpharositeDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+    },
+
+    [ITEM_UMBREONITE] =
+    {
+        .name = _("Umbreonite"),
+        .itemId = ITEM_UMBREONITE,
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = sUmbreoniteDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,

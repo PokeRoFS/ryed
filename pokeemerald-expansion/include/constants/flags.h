@@ -1648,5 +1648,6 @@
 #define FLAG_HIDE_DREAM_POKEBALL                0x501
 #define FLAG_RIVAL_MET_IN_DREAM_WORLD           0x502
 #define CHECKED_TIME                            0x503
+#define FLAG_RECEIVED_JOLTEONITE                0x504
 
 #endif // GUARD_CONSTANTS_FLAGS_H
