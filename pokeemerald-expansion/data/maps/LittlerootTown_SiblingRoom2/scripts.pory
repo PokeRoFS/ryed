@@ -8,7 +8,7 @@ script CHECKING_TIME {
 	msgbox("Oh wow it's already 5:00\p Time to go!")
 	msgbox("Can't forget my lucky items!\n")
 	if (!flag(CHECKED_TIME)){
-		finditem(ITEM_JOLTEONITE)
+		finditem(ITEM_UMBREONITE)
 		finditem(ITEM_MEGA_RING)
 		finditem(ITEM_THUNDER_STONE)
 		setvar(VAR_LITTLEROOT_INTRO_STATE, 7)
