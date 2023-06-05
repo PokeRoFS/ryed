@@ -1649,5 +1649,7 @@
 #define FLAG_RIVAL_MET_IN_DREAM_WORLD           0x502
 #define CHECKED_TIME                            0x503
 #define FLAG_RECEIVED_JOLTEONITE                0x504
+#define SPAWNED_POKEMON                         0x505
+#define BLACKOUT_COMPLETE                       0x506
 
 #endif // GUARD_CONSTANTS_FLAGS_H

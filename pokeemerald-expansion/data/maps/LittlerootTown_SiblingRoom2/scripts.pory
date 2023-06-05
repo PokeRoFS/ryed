@@ -5,12 +5,9 @@ LittlerootTown_SiblingRoom2_MapScripts::
 
 script CHECKING_TIME {
 	lockall
-	msgbox("Oh wow it's already 5:00\p Time to go!")
-	msgbox("Can't forget my lucky items!\n")
+	msgbox("Oh wow it's already 5:00\p Time to go!\n")
+	msgbox("Gotta take the trash cans out...")
 	if (!flag(CHECKED_TIME)){
-		finditem(ITEM_UMBREONITE)
-		finditem(ITEM_MEGA_RING)
-		finditem(ITEM_THUNDER_STONE)
 		setvar(VAR_LITTLEROOT_INTRO_STATE, 7)
 		setflag(FLAG_SET_WALL_CLOCK)
 		setflag(FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_1)

@@ -302,3 +302,55 @@ PlayersHouse_2F_Text_ItsAGameCube:
 	.string "It's a Nintendo GameCube.\p"
 	.string "A Game Boy Advance is connected to\n"
 	.string "serve as the Controller.$"
+
+RivalFoundItem::
+	lockall
+	goto_if_unset SPAWNED_POKEMON, RivalFoundItem_2
+	goto_if_unset BLACKOUT_COMPLETE, RivalFoundItem_5
+RivalFoundItem_1:
+	releaseall
+	return
+
+RivalFoundItem_2:
+	applymovement 3, walk_down
+	msgbox RivalFoundItem_Text_0
+	msgbox RivalFoundItem_Text_1
+	msgbox RivalFoundItem_Text_2
+	finditem ITEM_UMBREONITE
+	fadescreen FADE_TO_BLACK
+	warp MAP_ANCIENT_CITY, 14, 18
+	fadescreen FADE_FROM_BLACK
+	goto RivalFoundItem_1
+
+RivalFoundItem_5:
+	setflag BLACKOUT_COMPLETE
+	msgbox RivalFoundItem_Text_3
+	msgbox RivalFoundItem_Text_4
+	msgbox RivalFoundItem_Text_5
+	fadescreen FADE_TO_BLACK
+	removeobject 3
+	fadescreen FADE_FROM_BLACK
+	goto RivalFoundItem_1
+
+
+walk_down:
+	walk_down
+	step_end
+
+RivalFoundItem_Text_0:
+	.string "Hey loser!\n$"
+
+RivalFoundItem_Text_1:
+	.string "When I was taking out the trash,\p I found this cool orb!$"
+
+RivalFoundItem_Text_2:
+	.string "It kinda reminds me of umbreon lol.\p Take a look.$"
+
+RivalFoundItem_Text_3:
+	.string "Yo are you alright???\n$"
+
+RivalFoundItem_Text_4:
+	.string "You blacked out,\p and there was this loud scream...\n$"
+
+RivalFoundItem_Text_5:
+	.string "Anyways, don't forget to grab your\p phone before you go out.\n$"

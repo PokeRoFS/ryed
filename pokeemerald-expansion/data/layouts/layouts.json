@@ -4440,6 +4440,36 @@
       "secondary_tileset": "gTileset_InsideOfTruck",
       "border_filepath": "data/layouts/DreamWorld1/border.bin",
       "blockdata_filepath": "data/layouts/DreamWorld1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ANCIENT_CITY",
+      "name": "AncientCity_Layout",
+      "width": 27,
+      "height": 25,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/AncientCity/border.bin",
+      "blockdata_filepath": "data/layouts/AncientCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_INNER_ANCIENT_CITY",
+      "name": "InnerAncientCity_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/InnerAncientCity/border.bin",
+      "blockdata_filepath": "data/layouts/InnerAncientCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_ANCIENT_CITY_BASE",
+      "name": "AncientCityBase_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/AncientCityBase/border.bin",
+      "blockdata_filepath": "data/layouts/AncientCityBase/map.bin"
     }
   ]
 }

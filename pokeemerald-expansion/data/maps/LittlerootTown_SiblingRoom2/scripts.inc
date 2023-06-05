@@ -11,9 +11,6 @@ CHECKING_TIME_1:
 	return
 
 CHECKING_TIME_2:
-	finditem ITEM_JOLTEONITE
-	finditem ITEM_MEGA_RING
-	finditem ITEM_THUNDER_STONE
 	setvar VAR_LITTLEROOT_INTRO_STATE, 7
 	setflag FLAG_SET_WALL_CLOCK
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_1
@@ -43,10 +40,10 @@ MOVE_PLAYER:
 	step_end
 
 CHECKING_TIME_Text_0:
-	.string "Oh wow it's already 5:00\p Time to go!$"
+	.string "Oh wow it's already 5:00\p Time to go!\n$"
 
 CHECKING_TIME_Text_1:
-	.string "Can't forget my lucky items!\n$"
+	.string "Gotta take the trash cans out...$"
 
 Dreaming_Text_0:
 	.string "I must've fallen asleep while\p working...\n$"

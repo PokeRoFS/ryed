@@ -1065,3 +1065,9 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/LittlerootTown_SiblingRoom2/scripts.inc"
 
 	.include "data/maps/DreamWorld1/scripts.inc"
+
+	.include "data/maps/AncientCity/scripts.inc"
+
+	.include "data/maps/InnerAncientCity/scripts.inc"
+
+	.include "data/maps/AncientCityBase/scripts.inc"

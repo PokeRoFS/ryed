@@ -1,0 +1,23 @@
+raw `
+AncientCityBase_MapScripts::
+	.byte 0
+`
+
+script SUMMON_POKEMON {
+    lockall
+    if (!flag(SPAWNED_POKEMON)) {
+        msgbox("Finally, I have been awakened...\n")
+        msgbox("It seems that you are the one\p who was chosen to change the world.\n")
+        msgbox("With the introduction of pokemon,\p the world will change.\n")
+        msgbox("However, I know that people\p will abuse the power of pokemon.\n")
+        msgbox("You must be the one to stop these people.\pGood luck.\n")
+        fadescreen(FADE_TO_BLACK)
+        playmoncry(SPECIES_ARCEUS, CRY_MODE_ENCOUNTER)
+        delay(40)
+        waitmoncry()
+        setflag(SPAWNED_POKEMON)
+        warp(MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F, 2, 14)
+        fadescreen(FADE_FROM_BLACK)
+    }
+    releaseall
+}

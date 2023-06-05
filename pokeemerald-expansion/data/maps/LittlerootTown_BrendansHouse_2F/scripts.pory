@@ -304,3 +304,32 @@ PlayersHouse_2F_Text_ItsAGameCube:
 	.string "A Game Boy Advance is connected to\n"
 	.string "serve as the Controller.$"
 `
+script RivalFoundItem {
+	lockall
+	if(!flag(SPAWNED_POKEMON)) {
+		applymovement(3, walk_down)
+		msgbox("Hey loser!\n")
+		msgbox("When I was taking out the trash,\p I found this cool orb!"\n)
+		msgbox("It kinda reminds me of umbreon lol.\p Take a look.")
+		finditem(ITEM_UMBREONITE)
+		fadescreen(FADE_TO_BLACK)
+		warp(MAP_ANCIENT_CITY, 14, 18)
+		fadescreen(FADE_FROM_BLACK)
+	} else {
+		if (!flag(BLACKOUT_COMPLETE)) {
+			setflag(BLACKOUT_COMPLETE)
+			applymovement(3, walk_down)
+			msgbox("Yo are you alright???\n")
+			msgbox("You blacked out,\p and there was this loud scream...\n")
+			msgbox("Anyways, don't forget to grab your\p phone before you go out.\n")
+			fadescreen(FADE_TO_BLACK)
+			removeobject(3)
+			fadescreen(FADE_FROM_BLACK)
+		}
+	}
+	releaseall
+}
+
+movement walk_down {
+	walk_down
+}
