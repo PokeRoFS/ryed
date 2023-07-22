@@ -92,10 +92,7 @@
     "Underwater_Route128",
     "Underwater_Route129",
     "Underwater_Route105",
-    "Underwater_Route125",
-    "AncientCity",
-    "InnerAncientCity",
-    "AncientCityBase"
+    "Underwater_Route125"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -434,7 +431,13 @@
     "TerraCave_Entrance",
     "TerraCave_End",
     "AlteringCave",
-    "MeteorFalls_StevensCave"
+    "MeteorFalls_StevensCave",
+    "Ancient_City",
+    "Ancient_City_B1F",
+    "Ancient_City_B2F",
+    "NaturalBridgeCaverns_1F_1R",
+    "NaturalBridgeCaverns_1F_2R",
+    "NaturalBridgeCaverns_B1F"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

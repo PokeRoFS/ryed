@@ -1,10 +1,5 @@
 .set LOCALID_RIVAL, 1
 
-LittlerootTown_BrendansHouse_2F_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_BrendansHouse_2F_OnTransition
-	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, LittlerootTown_BrendansHouse_2F_OnWarp
-	.byte 0
-
 LittlerootTown_BrendansHouse_2F_OnTransition:
 	call_if_lt VAR_LITTLEROOT_RIVAL_STATE, 2, LittlerootTown_BrendansHouse_2F_EventScript_CheckSetReadyToMeetBrendan
 	call_if_ge VAR_LITTLEROOT_RIVAL_STATE, 3, LittlerootTown_BrendansHouse_2F_EventScript_CheckShouldUpdateBrendanPos
@@ -303,11 +298,21 @@ PlayersHouse_2F_Text_ItsAGameCube:
 	.string "A Game Boy Advance is connected to\n"
 	.string "serve as the Controller.$"
 
+LittlerootTown_BrendansHouse_2F_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, LittlerootTown_BrendansHouse_2F_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
+	.byte 0
+
+LittlerootTown_BrendansHouse_2F_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
+	map_script_2 VAR_TEMP_0, 0, RivalFoundItem
+	.2byte 0
+
+
 RivalFoundItem::
 	lockall
 	goto_if_unset SPAWNED_POKEMON, RivalFoundItem_2
 	goto_if_unset BLACKOUT_COMPLETE, RivalFoundItem_5
 RivalFoundItem_1:
+	setvar VAR_TEMP_0, 1
 	releaseall
 	return
 
@@ -324,6 +329,7 @@ RivalFoundItem_2:
 
 RivalFoundItem_5:
 	setflag BLACKOUT_COMPLETE
+	applymovement 3, walk_down
 	msgbox RivalFoundItem_Text_3
 	msgbox RivalFoundItem_Text_4
 	msgbox RivalFoundItem_Text_5
@@ -341,10 +347,10 @@ RivalFoundItem_Text_0:
 	.string "Hey loser!\n$"
 
 RivalFoundItem_Text_1:
-	.string "When I was taking out the trash,\p I found this cool orb!$"
+	.string "When I was taking out the trash,\lI found this cool orb!\p$"
 
 RivalFoundItem_Text_2:
-	.string "It kinda reminds me of umbreon lol.\p Take a look.$"
+	.string "It kinda reminds me of umbreon lol.\lTake a look.\n$"
 
 RivalFoundItem_Text_3:
 	.string "Yo are you alright???\n$"

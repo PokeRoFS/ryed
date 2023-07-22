@@ -13,7 +13,7 @@ script InitContinued_Confusion {
 
 script InitConfused_Ball {
 	lockall
-	msgbox("A pokeball?\p This is cool I wish they were real...")
+	msgbox("A pokeball?\lThis is cool I wish they were real...\n")
 	call(Rival_Movement)
 }
 
@@ -29,7 +29,7 @@ script Rival_Movement {
 	setflag(FLAG_HIDE_DREAM_POKEBALL)
 	applymovement(LOCALID_RIVAL, Rival_Movement_Data1)
 	waitmovement(0)
-	msgbox("{PLAYER}! Sorry I left my pokeball out!")
+	msgbox("{PLAYER}! Sorry I left my pokeball out!\n")
 	applymovement(LOCALID_RIVAL, Rival_Movement_Data2)
 	waitmovement(0)
 	removeobject(2)
@@ -49,7 +49,7 @@ movement Rival_Movement_Data2 {
 }
 
 script Final_Confusion {
-	msgbox("What the fuck?\p When did they get a pokeball?")
+	msgbox("What the fuck?\lWhen did Sheyenne get a pokeball?\n")
 	setdynamicwarp(MAP_LITTLEROOT_TOWN_SIBLING_ROOM2, 0, 2)
 	releaseall
 }

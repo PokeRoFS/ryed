@@ -1,0 +1,55 @@
+{
+  "id": "MAP_NATURAL_BRIDGE_CAVERNS_1F_1R",
+  "name": "NaturalBridgeCaverns_1F_1R",
+  "layout": "LAYOUT_NATURAL_BRIDGE_CAVERNS_1F_1R",
+  "music": "MUS_VICTORY_ROAD",
+  "region_map_section": "MAPSEC_NATURAL_BRIDGE_CAVERNS",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 9,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE102",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 8,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_NATURAL_BRIDGE_CAVERNS_B1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 12,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_NATURAL_BRIDGE_CAVERNS_B1F",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 12,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_NATURAL_BRIDGE_CAVERNS_1F_2R",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

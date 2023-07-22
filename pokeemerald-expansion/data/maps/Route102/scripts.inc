@@ -107,3 +107,10 @@ Route102_Text_RouteSignOldale:
 Route102_Text_RouteSignPetalburg:
 	.string "ROUTE 102\n"
 	.string "{LEFT_ARROW} PETALBURG CITY$"
+
+tempWarp::
+	fadescreen FADE_TO_BLACK
+	warp MAP_ROUTE102, 4, 25
+	fadescreen FADE_FROM_BLACK
+	return
+

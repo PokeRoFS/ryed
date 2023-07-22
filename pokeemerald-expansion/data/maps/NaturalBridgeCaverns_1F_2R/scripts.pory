@@ -1,0 +1,10 @@
+raw `
+NaturalBridgeCaverns_1F_2R_MapScripts::
+	.byte 0
+`
+
+script EventScript_NaturalBridgeCaverns_1F_2R_Sign {
+	lockall
+	msgbox("Where the crystals lie,\lDiancie comes to life.\n")
+	releaseall
+}

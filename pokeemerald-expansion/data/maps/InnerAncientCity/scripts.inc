@@ -1,8 +1,0 @@
-InnerAncientCity_MapScripts::
-    map_script MAP_SCRIPT_ON_LOAD, SETWARP
-	.byte 0
-
-SETWARP::
-	setdynamicwarp MAP_ANCIENT_CITY_BASE, 5, 9
-	return
-

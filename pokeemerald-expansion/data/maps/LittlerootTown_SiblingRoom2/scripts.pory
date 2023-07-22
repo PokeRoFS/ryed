@@ -1,12 +1,22 @@
 raw `
-LittlerootTown_SiblingRoom2_MapScripts::
-	.byte 0
 `
 
+mapscripts LittlerootTown_SiblingRoom2_MapScripts {
+	MAP_SCRIPT_ON_FRAME_TABLE [
+		VAR_TEMP_0, 0: SET_CURR_ENVIRONMENT
+	]
+}
+
+script SET_CURR_ENVIRONMENT {
+	if (!flag(CHECKED_TIME)) {
+		goto(Dreaming)
+	} else {
+		setvar(VAR_TEMP_0, 1)
+	}
+}
+
 script CHECKING_TIME {
-	lockall
-	msgbox("Oh wow it's already 5:00\p Time to go!\n")
-	msgbox("Gotta take the trash cans out...")
+	msgbox("Oh wow it's already 5:00\l Time to go!\pGotta take the trash cans out...\n")
 	if (!flag(CHECKED_TIME)){
 		setvar(VAR_LITTLEROOT_INTRO_STATE, 7)
 		setflag(FLAG_SET_WALL_CLOCK)
@@ -15,20 +25,22 @@ script CHECKING_TIME {
 		setflag(CHECKED_TIME)
 		setflag(FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_TRUCK)
 	}
+	setvar(VAR_TEMP_0, 1)
 	releaseall
+	end
 }
 
 script Dreaming {
 	lockall
 	if (!flag(CHECKED_TIME)) {
-		msgbox("I must've fallen asleep while\p working...\n")
-		msgbox("I should check the time on my computer!\n")
-		applymovement(OBJ_EVENT_ID_PLAYER, MOVE_PLAYER)
+		msgbox("I must've fallen asleep while\lworking...\pI should check the time on my computer!\n")
+		applymovement(OBJ_EVENT_ID_PLAYER, LOOK_UP)
 		waitmovement(0)
+		goto(CHECKING_TIME)
 	}
-	releaseall
+	end
 }
 
-movement MOVE_PLAYER {
-	walk_left
+movement LOOK_UP {
+	face_up
 }

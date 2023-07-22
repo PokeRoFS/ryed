@@ -68,6 +68,8 @@ const struct MonCoords gMonFrontPicCoords[] =
     [SPECIES_POLIWHIRL]                    = { .size = MON_COORDS_SIZE(64, 48), .y_offset =  9 },
     [SPECIES_POLIWRATH]                    = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  6 },
     [SPECIES_ABRA]                         = { .size = MON_COORDS_SIZE(56, 48), .y_offset = 10 },
+    [SPECIES_ABRA2]                         = { .size = MON_COORDS_SIZE(56, 48), .y_offset = 10 },
+    [SPECIES_ABRA3]                         = { .size = MON_COORDS_SIZE(56, 48), .y_offset = 10 },
     [SPECIES_KADABRA]                      = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  5 },
     [SPECIES_ALAKAZAM]                     = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  2 },
     [SPECIES_MACHOP]                       = { .size = MON_COORDS_SIZE(48, 48), .y_offset = 10 },

@@ -62,10 +62,10 @@ InitContinued_Confusion_Text_0:
 	.string "Endless hallways... What's the point?$"
 
 InitConfused_Ball_Text_0:
-	.string "A pokeball?\p This is cool I wish they were real...$"
+	.string "A pokeball?\lThis is cool I wish they were real...\n$"
 
 Rival_Movement_Text_0:
-	.string "{PLAYER}! Sorry I left my pokeball out!$"
+	.string "{PLAYER}! Sorry I left my pokeball out!\n$"
 
 Final_Confusion_Text_0:
-	.string "What the fuck?\p When did they get a pokeball?$"
+	.string "What the fuck?\lWhen did Sheyenne get a pokeball?\n$"

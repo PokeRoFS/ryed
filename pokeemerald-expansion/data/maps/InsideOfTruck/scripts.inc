@@ -62,4 +62,4 @@ InitLoad_Confusion::
 
 
 InitLoad_Confusion_Text_0:
-	.string "What is going on?\nWhere am I?$"
+	.string "What is going on?\lWhere am I?$"

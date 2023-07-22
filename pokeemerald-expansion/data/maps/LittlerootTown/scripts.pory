@@ -1,13 +1,13 @@
 raw `
 .set LOCALID_TWIN, 1
-.set LOCALID_MOM, 4
+.set LOCALID_MOM, 3
 .set LOCALID_RIVAL, 7
-.set LOCALID_BIRCH, 8
+.set LOCALID_BIRCH, 4
 
-LittlerootTown_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_OnTransition
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, LittlerootTown_OnFrame
-	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, LittlerootTown_OnWarp
+@ LittlerootTown_MapScripts::
+	@ map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_OnTransition
+	@ map_script MAP_SCRIPT_ON_FRAME_TABLE, LittlerootTown_OnFrame
+	@ map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, LittlerootTown_OnWarp
 	.byte 0
 
 	@ State descriptions for VAR_LITTLEROOT_TOWN_STATE
@@ -1010,7 +1010,7 @@ LittlerootTown_Text_ProfBirchsHouse:
 	.string "PROF. BIRCH'S HOUSE$"
 
 LittlerootTown_Text_BirchSomethingToShowYouAtLab:
-	.string "PROF. BIRCH: Well, well, {PLAYER}{KUN}!\n"
+	.string "HARSHBARGER: Well, well, {PLAYER}{KUN}!\n"
 	.string "That was good work out there!\p"
 	.string "I knew there was something special\n"
 	.string "about you when I first saw you,\l"
@@ -1019,5 +1019,64 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I gave you?\p"
 	.string "I have something to show you.\n"
 	.string "Let's go to my LAB.$"
-
 `
+
+mapscripts LittlerootTown_MapScripts {
+	MAP_SCRIPT_ON_FRAME_TABLE [
+		VAR_LITTLEROOT_INTRO_STATE, 7: Summon_Harshbarger
+	]
+}
+
+script Summon_Harshbarger {
+	if (!flag(HARSHBARGER_INTRO)) {
+		lockall()
+		addobject(LOCALID_BIRCH)
+		applymovement(LOCALID_BIRCH, Harshbarger_Meets_Player)
+		waitmovement(LOCALID_BIRCH)
+		msgbox("Harshbarger: {PLAYER}{KUN}!\n")
+		msgbox("It seems something unexpected\p has happened.\n")
+		msgbox("I've been studying the physics\p of opening other dimensions\n")
+		msgbox("and I managed to run into\p Pokemon months ago.\n")
+		msgbox("However,\p it seems that something has caused\n")
+		msgbox("this massive portal to open fully.\n")
+		msgbox("So, Pokemon have managed to spawn\p across the world.\n")
+		msgbox("Come look for yourself!\p Meet me up north.")
+		applymovement(LOCALID_BIRCH, Harshbarger_Leaves)
+		waitmovement(LOCALID_BIRCH)
+		removeobject(LOCALID_BIRCH)
+		setflag(HARSHBARGER_INTRO)
+		setvar(VAR_LITTLEROOT_INTRO_STATE, 8)
+		releaseall()
+	}
+}
+
+movement Harshbarger_Meets_Player {
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+}
+
+movement Harshbarger_Leaves {
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+}
+
+script LittlerootTown_EventScript_HouseLocked {
+	lockall
+	msgbox("The house is locked...\n")
+	msgbox("Maybe we shouldn't break-in!\n")
+	releaseall
+}
+
+script LittlerootTown_EventScript_MickeyHouseSign {
+	lockall
+	msgbox("It's Mickey's house!\n")
+	releaseall
+}

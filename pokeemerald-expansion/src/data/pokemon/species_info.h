@@ -2307,6 +2307,52 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .noFlip = FALSE,
     },
 
+    [SPECIES_ABRA2] =
+    {
+        .baseHP        = 40,
+        .baseAttack    = 35,
+        .baseDefense   = 30,
+        .baseSpeed     = 105,
+        .baseSpAttack  = 120,
+        .baseSpDefense = 70,
+        .types = { TYPE_PSYCHIC, TYPE_PSYCHIC },
+        .catchRate = 200,
+        .expYield = 62,
+        .evYield_SpAttack  = 1,
+        .itemRare = ITEM_TWISTED_SPOON,
+        .genderRatio = PERCENT_FEMALE(25),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_HUMAN_LIKE},
+        .abilities = {ABILITY_SYNCHRONIZE, ABILITY_INNER_FOCUS, ABILITY_MAGIC_GUARD},
+        .bodyColor = BODY_COLOR_BROWN,
+        .noFlip = FALSE,
+    },
+
+    [SPECIES_ABRA3] =
+    {
+        .baseHP        = 60,
+        .baseAttack    = 50,
+        .baseDefense   = 45,
+        .baseSpeed     = 125,
+        .baseSpAttack  = 145,
+        .baseSpDefense = 100,
+        .types = { TYPE_PSYCHIC, TYPE_PSYCHIC },
+        .catchRate = 200,
+        .expYield = 240,
+        .evYield_SpAttack  = 1,
+        .itemRare = ITEM_TWISTED_SPOON,
+        .genderRatio = PERCENT_FEMALE(25),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_HUMAN_LIKE},
+        .abilities = {ABILITY_SYNCHRONIZE, ABILITY_INNER_FOCUS, ABILITY_MAGIC_GUARD},
+        .bodyColor = BODY_COLOR_BROWN,
+        .noFlip = FALSE,
+    },
+
     [SPECIES_KADABRA] =
     {
         .baseHP        = 40,

@@ -1147,6 +1147,16 @@ static const struct LevelUpMove sAbraLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
+static const struct LevelUpMove sAbra2LevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 10, MOVE_PSYCHIC),
+    LEVEL_UP_END
+};
+
+static const struct LevelUpMove sAbra3LevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 10, MOVE_PSYCHIC),
+    LEVEL_UP_END
+};
+
 static const struct LevelUpMove sKadabraLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 0, MOVE_KINESIS),
     LEVEL_UP_MOVE( 1, MOVE_KINESIS),

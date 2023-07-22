@@ -1,0 +1,22 @@
+raw `
+Ancient_City_B2F_MapScripts::
+	.byte 0
+`
+
+script EventScript_Ancient_City_B2F_Sign {
+	lockall
+	playmoncry(SPECIES_ARCEUS, CRY_MODE_NORMAL)
+	waitmoncry()
+	msgbox("Ryan... It seems you have\lfound the stone to evolve creatures\p")
+	msgbox("from a distant land.\n")
+	msgbox("However, by securing this stone\lit is your destiny to grow\p")
+	msgbox("with POKéMON.\n")
+	msgbox("I see many challenges ahead of\lyou.\n")
+	msgbox("Good luck!\n")
+	fadescreen(FADE_TO_BLACK)
+	warp(MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F, 2, 15)
+	fadescreen(FADE_FROM_BLACK)
+	setflag(SPAWNED_POKEMON)
+	releaseall
+	end
+}

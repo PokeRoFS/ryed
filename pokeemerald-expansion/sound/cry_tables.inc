@@ -63,6 +63,8 @@ gCryTable::
 	cry Cry_Poliwhirl
 	cry Cry_Poliwrath
 	cry Cry_Abra
+	cry Cry_Abra2
+	cry Cry_Abra3
 	cry Cry_Kadabra
 	cry Cry_Alakazam
 	cry Cry_Machop

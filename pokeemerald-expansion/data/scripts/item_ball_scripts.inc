@@ -1,5 +1,9 @@
 Route102_EventScript_ItemPotion::
-	finditem ITEM_POTION
+	finditem ITEM_SUPER_POTION
+	end
+
+Route102_EventScript_ItemNugget::
+	finditem ITEM_NUGGET
 	end
 
 Route103_EventScript_ItemGuardSpec::

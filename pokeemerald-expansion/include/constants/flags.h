@@ -1651,5 +1651,10 @@
 #define FLAG_RECEIVED_JOLTEONITE                0x504
 #define SPAWNED_POKEMON                         0x505
 #define BLACKOUT_COMPLETE                       0x506
+#define HARSHBARGER_INTRO                       0x507
+#define Summon_Zigzagoon                        0x508
+#define FLAG_HIDE_BROTHER_IN_OLDALE             0x509
+#define FLAG_ITEM_ROUTE_102_NUGGET              0x50A
+#define FLAG_ENABLE_MOM_CALL                    0x50B
 
 #endif // GUARD_CONSTANTS_FLAGS_H

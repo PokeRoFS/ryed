@@ -4385,16 +4385,23 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Eddie[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Allen[] = {
+static const struct TrainerMonCustomized sParty_Allen[] = {
     {
-    .iv = 0,
-    .lvl = 4,
+    .lvl = 6,
     .species = SPECIES_ZIGZAGOON,
+    .ev = TRAINER_PARTY_EVS(4, 252, 0, 252, 0, 0),
+    .heldItem = ITEM_SITRUS_BERRY,
+    .nature = TRAINER_PARTY_NATURE(NATURE_JOLLY),
     },
     {
     .iv = 0,
-    .lvl = 3,
+    .lvl = 5,
     .species = SPECIES_TAILLOW,
+    .ev = TRAINER_PARTY_EVS(4, 252, 0, 252, 0, 0),
+    .heldItem = ITEM_TOXIC_ORB,
+    .ability = ABILITY_GUTS,
+    .nature = TRAINER_PARTY_NATURE(NATURE_JOLLY),
+    .moves = {MOVE_PROTECT, MOVE_WING_ATTACK, MOVE_QUICK_ATTACK}
     }
 };
 
@@ -6785,7 +6792,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BrendanRoute103Mudkip[] 
     {
     .iv = 0,
     .lvl = 5,
-    .species = SPECIES_TREECKO,
+    .species = SPECIES_ABRA,
     }
 };
 
@@ -6829,7 +6836,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BrendanRoute103Treecko[]
     {
     .iv = 0,
     .lvl = 5,
-    .species = SPECIES_TORCHIC,
+    .species = SPECIES_ABRA,
     }
 };
 
@@ -6873,7 +6880,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BrendanRoute103Torchic[]
     {
     .iv = 0,
     .lvl = 5,
-    .species = SPECIES_MUDKIP,
+    .species = SPECIES_ABRA,
     }
 };
 
@@ -6913,15 +6920,24 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BrendanRoute119Torchic[]
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute103Mudkip[] = {
+static const struct TrainerMonCustomized sParty_MayRoute103Mudkip[] = {
     {
-    .iv = 0,
-    .lvl = 5,
-    .species = SPECIES_TREECKO,
+    .nickname = COMPOUND_STRING("Abra"),
+    .iv = TRAINER_PARTY_IVS(31,31,31,31,31,31),
+    .lvl = 7,
+    .ability = ABILITY_SYNCHRONIZE,
+    .species = SPECIES_ABRA,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_PSYCHIC, MOVE_THUNDER_SHOCK, MOVE_RECOVER, MOVE_DAZZLING_GLEAM},
+    .gender = TRAINER_MON_MALE,
+    .nature = TRAINER_PARTY_NATURE(NATURE_MODEST),
+    .isShiny = FALSE,
+    .friendship = 255,
+    .ev = TRAINER_PARTY_EVS(4, 0, 0, 252, 252, 0),
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute110Mudkip[] = {
+static const struct TrainerMonCustomized sParty_MayRoute110Mudkip[] = {
     {
     .iv = 50,
     .lvl = 18,
@@ -6939,7 +6955,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute110Mudkip[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute119Mudkip[] = {
+static const struct TrainerMonCustomized sParty_MayRoute119Mudkip[] = {
     {
     .iv = 100,
     .lvl = 29,
@@ -6957,15 +6973,24 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute119Mudkip[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute103Treecko[] = {
+static const struct TrainerMonCustomized sParty_MayRoute103Treecko[] = {
     {
-    .iv = 0,
-    .lvl = 5,
-    .species = SPECIES_TORCHIC,
+    .nickname = COMPOUND_STRING("Abra"),
+    .iv = TRAINER_PARTY_IVS(31,31,31,31,31,31),
+    .lvl = 7,
+    .ability = ABILITY_SYNCHRONIZE,
+    .species = SPECIES_ABRA,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_PSYCHIC, MOVE_THUNDER_SHOCK, MOVE_RECOVER, MOVE_DAZZLING_GLEAM},
+    .gender = TRAINER_MON_MALE,
+    .nature = TRAINER_PARTY_NATURE(NATURE_MODEST),
+    .isShiny = FALSE,
+    .friendship = 255,
+    .ev = TRAINER_PARTY_EVS(4, 0, 0, 252, 252, 0),
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute110Treecko[] = {
+static const struct TrainerMonCustomized sParty_MayRoute110Treecko[] = {
     {
     .iv = 50,
     .lvl = 18,
@@ -6983,7 +7008,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute110Treecko[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute119Treecko[] = {
+static const struct TrainerMonCustomized sParty_MayRoute119Treecko[] = {
     {
     .iv = 100,
     .lvl = 29,
@@ -7001,15 +7026,24 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute119Treecko[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute103Torchic[] = {
+static const struct TrainerMonCustomized sParty_MayRoute103Torchic[] = {
     {
-    .iv = 0,
-    .lvl = 5,
-    .species = SPECIES_MUDKIP,
+    .nickname = COMPOUND_STRING("Abra"),
+    .iv = TRAINER_PARTY_IVS(31,31,31,31,31,31),
+    .lvl = 7,
+    .ability = ABILITY_SYNCHRONIZE,
+    .species = SPECIES_ABRA,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_PSYCHIC, MOVE_THUNDER_SHOCK, MOVE_RECOVER, MOVE_DAZZLING_GLEAM},
+    .gender = TRAINER_MON_MALE,
+    .nature = TRAINER_PARTY_NATURE(NATURE_MODEST),
+    .isShiny = FALSE,
+    .friendship = 255,
+    .ev = TRAINER_PARTY_EVS(4, 0, 0, 252, 252, 0),
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute110Torchic[] = {
+static const struct TrainerMonCustomized sParty_MayRoute110Torchic[] = {
     {
     .iv = 50,
     .lvl = 18,
@@ -7027,7 +7061,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute110Torchic[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute119Torchic[] = {
+static const struct TrainerMonCustomized sParty_MayRoute119Torchic[] = {
     {
     .iv = 100,
     .lvl = 29,
@@ -7991,16 +8025,24 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MaxieMtChimney[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Tiana[] = {
+static const struct TrainerMonCustomized sParty_Tiana[] = {
     {
     .iv = 0,
-    .lvl = 4,
-    .species = SPECIES_ZIGZAGOON,
+    .lvl = 9,
+    .species = SPECIES_POOCHYENA,
+    .nature = TRAINER_PARTY_NATURE(NATURE_JOLLY),
+    .heldItem = ITEM_CHOICE_BAND,
+    .moves = {MOVE_BITE, MOVE_TACKLE},
+    .ev = TRAINER_PARTY_EVS(0, 252, 2, 252, 0, 2),
     },
     {
     .iv = 0,
-    .lvl = 4,
+    .lvl = 10,
     .species = SPECIES_SHROOMISH,
+    .nature = TRAINER_PARTY_NATURE(NATURE_CALM),
+    .heldItem = ITEM_GRASS_GEM,
+    .moves = {MOVE_STUN_SPORE, MOVE_LEECH_SEED, MOVE_MEGA_DRAIN, MOVE_POISON_POWDER},
+    .ev = TRAINER_PARTY_EVS(4, 0, 0, 0, 252, 252),
     }
 };
 
@@ -8147,16 +8189,32 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Crissy[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Rick[] = {
+static const struct TrainerMonCustomized sParty_Rick[] = {
     {
     .iv = 0,
-    .lvl = 4,
-    .species = SPECIES_WURMPLE,
+    .lvl = 7,
+    .species = SPECIES_SCYTHER,
+    .moves = {MOVE_VACUUM_WAVE, MOVE_QUICK_ATTACK, MOVE_FOCUS_ENERGY, MOVE_PURSUIT},
+    .nature = TRAINER_PARTY_NATURE(NATURE_JOLLY),
+    .ev = TRAINER_PARTY_EVS(128, 252, 0, 128, 0, 0),
     },
     {
     .iv = 0,
-    .lvl = 4,
-    .species = SPECIES_WURMPLE,
+    .lvl = 8,
+    .species = SPECIES_PINSIR,
+    .nature = TRAINER_PARTY_NATURE(NATURE_ADAMANT),
+    .ev = TRAINER_PARTY_EVS(128, 252, 0, 128, 0, 0),
+    .moves = {MOVE_VISE_GRIP, MOVE_FOCUS_ENERGY, MOVE_BIND, MOVE_SEISMIC_TOSS},
+    },
+    {
+    .iv = 0,
+    .lvl = 9,
+    .species = SPECIES_SHUCKLE,
+    .heldItem = ITEM_BERRY_JUICE,
+    .moves = {MOVE_BIDE, MOVE_WITHDRAW, MOVE_ENCORE, MOVE_BUG_BITE},
+    .nature = TRAINER_PARTY_NATURE(NATURE_BOLD),
+    .ev = TRAINER_PARTY_EVS(252, 0, 128, 0, 0, 128),
+
     }
 };
 
@@ -12432,5 +12490,23 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayLinkPlaceholder[] = {
     .iv = 0,
     .lvl = 5,
     .species = SPECIES_KYOGRE,
+    }
+};
+
+static const struct TrainerMonCustomized sParty_Brother_Oldale[] = {
+    {
+    .nickname = COMPOUND_STRING("Jolteon"),
+    .iv = TRAINER_PARTY_IVS(31,31,31,31,31,31),
+    .lvl = 7,
+    .ability = ABILITY_VOLT_ABSORB,
+    .species = SPECIES_JOLTEON,
+    .heldItem = ITEM_MAGNET,
+    .moves = {MOVE_THUNDER_SHOCK, MOVE_QUICK_ATTACK, MOVE_AGILITY, MOVE_DAZZLING_GLEAM},
+    .ball = ITEM_GREAT_BALL,
+    .gender = TRAINER_MON_MALE,
+    .nature = TRAINER_PARTY_NATURE(NATURE_MODEST),
+    .isShiny = FALSE,
+    .friendship = 255,
+    .ev = TRAINER_PARTY_EVS(4, 0, 0, 252, 252, 0),
     }
 };

@@ -57,7 +57,7 @@ InsideOfTruck_Text_BoxPrintedWithMonLogo:
 `
 script InitLoad_Confusion {
 	lockall
-	msgbox("What is going on?\nWhere am I?")
+	msgbox("What is going on?\lWhere am I?")
 	setvar(VAR_TEMP_0,1)
 	releaseall
 }

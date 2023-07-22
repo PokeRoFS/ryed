@@ -639,6 +639,14 @@ Cry_Abra::
 	.incbin "sound/direct_sound_samples/cries/abra.bin"
 
 	.align 2
+Cry_Abra2::
+	.incbin "sound/direct_sound_samples/cries/abra.bin"
+
+	.align 2
+Cry_Abra3::
+	.incbin "sound/direct_sound_samples/cries/abra.bin"
+
+	.align 2
 Cry_Kadabra::
 	.incbin "sound/direct_sound_samples/cries/kadabra.bin"
 

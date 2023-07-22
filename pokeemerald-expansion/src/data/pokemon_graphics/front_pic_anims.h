@@ -795,6 +795,26 @@ static const union AnimCmd sAnim_Abra_1[] =
     ANIMCMD_END,
 };
 
+static const union AnimCmd sAnim_Abra2_1[] =
+{
+    ANIMCMD_FRAME(0, 7),
+    ANIMCMD_FRAME(1, 21),
+    ANIMCMD_FRAME(0, 13),
+    ANIMCMD_FRAME(1, 21),
+    ANIMCMD_FRAME(0, 10),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_Abra3_1[] =
+{
+    ANIMCMD_FRAME(0, 7),
+    ANIMCMD_FRAME(1, 21),
+    ANIMCMD_FRAME(0, 13),
+    ANIMCMD_FRAME(1, 21),
+    ANIMCMD_FRAME(0, 10),
+    ANIMCMD_END,
+};
+
 static const union AnimCmd sAnim_Kadabra_1[] =
 {
     ANIMCMD_FRAME(0, 12),
@@ -10579,6 +10599,8 @@ SINGLE_ANIMATION(Poliwag);
 SINGLE_ANIMATION(Poliwhirl);
 SINGLE_ANIMATION(Poliwrath);
 SINGLE_ANIMATION(Abra);
+SINGLE_ANIMATION(Abra2);
+SINGLE_ANIMATION(Abra3);
 SINGLE_ANIMATION(Kadabra);
 SINGLE_ANIMATION(Alakazam);
 SINGLE_ANIMATION(Machop);
@@ -11717,6 +11739,8 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     [SPECIES_POLIWHIRL]   = sAnims_Poliwhirl,
     [SPECIES_POLIWRATH]   = sAnims_Poliwrath,
     [SPECIES_ABRA]        = sAnims_Abra,
+    [SPECIES_ABRA2]        = sAnims_Abra,
+    [SPECIES_ABRA3]        = sAnims_Abra,
     [SPECIES_KADABRA]     = sAnims_Kadabra,
     [SPECIES_ALAKAZAM]    = sAnims_Alakazam,
     [SPECIES_MACHOP]      = sAnims_Machop,
