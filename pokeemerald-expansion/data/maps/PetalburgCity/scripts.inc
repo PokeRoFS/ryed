@@ -180,8 +180,12 @@ PetalburgCity_Movement_WallyTutorialPlayer:
 	walk_right
 	walk_right
 	walk_right
-	walk_up
-	walk_up
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
 	walk_in_place_faster_right
 	step_end
 
@@ -214,8 +218,12 @@ PetalburgCity_Movement_WallyTutorialWally:
 	walk_right
 	walk_right
 	walk_right
-	walk_up
-	walk_up
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
 	walk_right
 	delay_16
 	walk_in_place_faster_up
@@ -705,7 +713,7 @@ PetalburgCity_EventScript_GymBoy::
 	end
 
 PetalburgCity_Text_WhereIsWally:
-	.string "Where has our WALLY gone?\p"
+	.string "Where has our TRUEMAN gone?\p"
 	.string "We have to leave for VERDANTURF TOWN\n"
 	.string "very soon…$"
 
@@ -739,7 +747,7 @@ PetalburgCity_Text_FullPartyExplanation:
 
 PetalburgCity_Text_GymSign:
 	.string "PETALBURG CITY POKéMON GYM\n"
-	.string "LEADER: NORMAN\l"
+	.string "LEADER: WES\l"
 	.string "“A man in pursuit of power!”$"
 
 PetalburgCity_Text_CitySign:

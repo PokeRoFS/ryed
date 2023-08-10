@@ -285,11 +285,11 @@ DewfordTown_Gym_EventScript_GymStatue::
 DewfordTown_Gym_Text_GymGuideAdvice:
 	.string "Hey, how's it going, CHAMPION-\n"
 	.string "bound {PLAYER}?\p"
-	.string "DEWFORD's GYM LEADER BRAWLY commands\n"
-	.string "FIGHTING-type POKéMON.\p"
-	.string "Going against him with NORMAL-type\n"
+	.string "DEWFORD's GYM LEADER LANDRY commands\n"
+	.string "FAIRY POKéMON.\p"
+	.string "Going against him with DARK-type\n"
 	.string "POKéMON is asking for trouble.\p"
-	.string "FIGHTING POKéMON will lay a serious\n"
+	.string "FAIRY POKéMON will lay a serious\n"
 	.string "smack down on NORMAL POKéMON,\l"
 	.string "so be careful!\p"
 	.string "What's worse, the GYM is as dark as\n"
@@ -314,7 +314,7 @@ DewfordTown_Gym_Text_TakaoPostBattle:
 	.string "Your technique is commendable!$"
 
 DewfordTown_Gym_Text_JocelynIntro:
-	.string "There's no need for BRAWLY to be\n"
+	.string "There's no need for LANDRY to be\n"
 	.string "involved!\p"
 	.string "I'll crush you!$"
 
@@ -341,7 +341,7 @@ DewfordTown_Gym_Text_LauraPostBattle:
 	.string "I battle in the dark to make my heart\n"
 	.string "stronger.\p"
 	.string "But because it's so dark, I can never\n"
-	.string "see BRAWLY's face…$"
+	.string "see LANDRY's face…$"
 
 DewfordTown_Gym_Text_LilithIntro:
 	.string "Ufufu…\n"
@@ -380,28 +380,26 @@ DewfordTown_Gym_Text_CristianPostBattle:
 	.string "Go after that BADGE!$"
 
 DewfordTown_Gym_Text_BrawlyIntro:
-	.string "I'm BRAWLY!\n"
+	.string "I'm LANDRY!\n"
 	.string "DEWFORD's GYM LEADER!\p"
-	.string "I've been churned in the rough waves\n"
-	.string "of these parts, and I've grown tough\l"
-	.string "in the pitch-black cave!\p"
+	.string "Oh... Ryan it's you...\n"
+	.string "I wasn't expecting another\l"
+	.string "challenger that I know!\p"
 	.string "So you wanted to challenge me?\n"
 	.string "Let me see what you're made of!$"
 
 DewfordTown_Gym_Text_BrawlyDefeat:
-	.string "Whoah, wow! You made a much bigger\n"
-	.string "splash than I expected!\p"
-	.string "You swamped me!\p"
+	.string "Whoah, wow! You really got me!\n"
 	.string "Okay, you've got me.\n"
 	.string "Take this GYM BADGE!$"
 
 DewfordTown_Gym_Text_ReceivedKnuckleBadge:
-	.string "{PLAYER} received the KNUCKLE BADGE\n"
-	.string "from BRAWLY.$"
+	.string "{PLAYER} received the FAIRY BADGE\n"
+	.string "from LANDRY.$"
 
 DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis:
-	.string "The KNUCKLE BADGE makes all POKéMON\n"
-	.string "up to Level 30, even those you get in\l"
+	.string "The FAIRY BADGE makes all POKéMON\n"
+	.string "up to Level 36, even those you get in\l"
 	.string "trades, obey without question.\p"
 	.string "And, you'll be able to use the HM move\n"
 	.string "FLASH outside of battle.\p"
@@ -415,7 +413,7 @@ DewfordTown_Gym_Text_ExplainBulkUp:
 	.string "… … … … … …$"
 
 DewfordTown_Gym_Text_RegisteredBrawly:
-	.string "Registered GYM LEADER BRAWLY\n"
+	.string "Registered GYM LEADER LANDRY\n"
 	.string "in the POKéNAV.$"
 
 DewfordTown_Gym_Text_BrawlyPostBattle:
@@ -428,11 +426,11 @@ DewfordTown_Gym_Text_GymStatue:
 
 DewfordTown_Gym_Text_GymStatueCertified:
 	.string "DEWFORD TOWN POKéMON GYM\p"
-	.string "BRAWLY'S CERTIFIED TRAINERS:\n"
+	.string "LANDRY'S CERTIFIED TRAINERS:\n"
 	.string "{PLAYER}$"
 
 DewfordTown_Gym_Text_BrawlyPreRematch:
-	.string "BRAWLY: A wave may draw back, but it\n"
+	.string "LANDRY: A wave may draw back, but it\n"
 	.string "always returns to the shore.\p"
 	.string "A giant wave of a talent like you…\n"
 	.string "I knew you would return!\p"
@@ -444,12 +442,12 @@ DewfordTown_Gym_Text_BrawlyRematchDefeat:
 	.string "Swamped again!$"
 
 DewfordTown_Gym_Text_BrawlyPostRematch:
-	.string "BRAWLY: Battling is vast and it's deep.\n"
+	.string "LANDRY: Battling is vast and it's deep.\n"
 	.string "You can't see the bottom.\l"
 	.string "It's just like the sea of HOENN!$"
 
 DewfordTown_Gym_Text_BrawlyRematchNeedTwoMons:
-	.string "BRAWLY: A wave may draw back, but it\n"
+	.string "LANDRY: A wave may draw back, but it\n"
 	.string "always returns to the shore.\p"
 	.string "A giant wave of a talent like you…\n"
 	.string "I knew you would return!\p"
@@ -457,3 +455,10 @@ DewfordTown_Gym_Text_BrawlyRematchNeedTwoMons:
 	.string "that can battle.\p"
 	.string "I'm sorry, but I'd like you to come back\n"
 	.string "with at least two POKéMON.$"
+
+DewfordTown_Gym_EventScript_Teleport::
+	lockall
+	fadescreen FADE_TO_BLACK
+	warp MAP_DEWFORD_TOWN_GYM, 5, 24
+	fadescreen FADE_FROM_BLACK
+	releaseall

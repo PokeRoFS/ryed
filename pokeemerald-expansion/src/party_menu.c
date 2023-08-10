@@ -5168,9 +5168,19 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc task)
     u16 *itemPtr = &gSpecialVar_ItemId;
     bool8 cannotUseEffect;
     u8 holdEffectParam = ItemId_GetHoldEffectParam(*itemPtr);
+    u8 i;
+    u8 index;
 
     sInitialLevel = GetMonData(mon, MON_DATA_LEVEL);
-    if (sInitialLevel != MAX_LEVEL)
+    for (i = 0; i < NUM_SOFT_CAPS; i++)
+    {
+        if (!FlagGet(sLevelCapFlags[i]))
+        {
+            index = i;
+            break;
+        }
+    }
+    if (sInitialLevel != MAX_LEVEL && sInitialLevel < sLevelCaps[index])
     {
         BufferMonStatsToTaskData(mon, arrayPtr);
         cannotUseEffect = ExecuteTableBasedItemEffect_(gPartyMenu.slotId, *itemPtr, 0);
@@ -5211,7 +5221,7 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc task)
     else
     {
         sFinalLevel = GetMonData(mon, MON_DATA_LEVEL, NULL);
-        gPartyMenuUseExitCallback = TRUE;
+        gPartyMenuUseExitCallback = FALSE;
         UpdateMonDisplayInfoAfterRareCandy(gPartyMenu.slotId, mon);
         RemoveBagItem(gSpecialVar_ItemId, 1);
         GetMonNickname(mon, gStringVar1);

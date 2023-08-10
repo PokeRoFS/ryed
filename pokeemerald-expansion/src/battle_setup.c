@@ -480,10 +480,10 @@ static void DoBattlePyramidTrainerHillBattle(void)
     TryUpdateGymLeaderRematchFromTrainer();
 }
 
-// Initiates battle where Wally catches Ralts
+// Initiates battle where TRUEMAN catches Ralts
 void StartWallyTutorialBattle(void)
 {
-    CreateMaleMon(&gEnemyParty[0], SPECIES_RALTS, 5);
+    CreateMaleMon(&gEnemyParty[0], SPECIES_BULBASAUR, 5);
     LockPlayerFieldControls();
     gMain.savedCallback = CB2_ReturnToFieldContinueScriptPlayMapMusic;
     gBattleTypeFlags = BATTLE_TYPE_WALLY_TUTORIAL;
@@ -1599,7 +1599,7 @@ static s32 TrainerIdToRematchTableId(const struct RematchTrainer *table, u16 tra
 }
 
 // Returns TRUE if the given trainer (by their entry in the rematch table) is not allowed to have rematches.
-// This applies to the Elite Four and Victory Road Wally (if he's not been defeated yet)
+// This applies to the Elite Four and Victory Road TRUEMAN (if he's not been defeated yet)
 static bool32 IsRematchForbidden(s32 rematchTableId)
 {
     if (rematchTableId >= REMATCH_ELITE_FOUR_ENTRIES)

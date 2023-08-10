@@ -481,6 +481,7 @@ Route110_EventScript_RivalExit::
 	call_if_eq VAR_0x8008, 3, Route110_EventScript_RivalExit3
 	removeobject LOCALID_RIVAL_ON_BIKE
 	setvar VAR_ROUTE110_STATE, 1
+	setflag FLAG_HIDE_ROUTE_110_TEAM_AQUA
 	savebgm MUS_DUMMY
 	fadedefaultbgm
 	releaseall
@@ -529,19 +530,19 @@ Route110_EventScript_MoveRival3::
 	return
 
 Route110_Movement_RivalApproachPlayer1:
-	walk_down
+	walk_up
 	walk_left
-	walk_in_place_faster_down
+	walk_in_place_faster_up
 	step_end
 
 Route110_Movement_RivalApproachPlayer2:
-	walk_down
+	walk_up
 	step_end
 
 Route110_Movement_RivalApproachPlayer3:
-	walk_down
+	walk_up
 	walk_right
-	walk_in_place_faster_down
+	walk_in_place_faster_up
 	step_end
 
 Route110_Movement_RivalExit1:
@@ -644,6 +645,12 @@ Route110_EventScript_BirchApproachPlayer1::
 	applymovement LOCALID_BIRCH, Route110_Movement_BirchApproachPlayer1
 	waitmovement 0
 	return
+
+Route110_EventScript_BigFish::
+	lock
+	msgbox Route110_Text_Fish, MSGBOX_DEFAULT
+	release
+	end
 
 Route110_EventScript_BirchApproachPlayer2::
 	applymovement LOCALID_BIRCH, Route110_Movement_BirchApproachPlayer2
@@ -991,3 +998,8 @@ Route110_Text_KeepAnEyeOutForRival:
 	.string "… … … … … …\p"
 	.string "Well, I had better get going.\n"
 	.string "See you again, {PLAYER}{KUN}!$"
+
+Route110_Text_Fish:
+	.string "Hey, sorry for the inconvenience...\l"
+	.string "We found a huge fish down south and\l"
+	.string "need some time to clear it safely!$"

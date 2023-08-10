@@ -85,16 +85,16 @@ MauvilleCity_Gym_EventScript_Wattson::
 	end
 
 MauvilleCity_Gym_EventScript_WattsonDefeated::
-	message MauvilleCity_Gym_Text_ReceivedDynamoBadge
+	message RustboroCity_Gym_Text_ReceivedStoneBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
-	msgbox MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis, MSGBOX_DEFAULT
+	msgbox RustboroCity_Gym_Text_ReceivedStoneBadge, MSGBOX_DEFAULT
 	setvar VAR_SLATEPORT_OUTSIDE_MUSEUM_STATE, 3
 	clearflag FLAG_HIDE_VERDANTURF_TOWN_SCOTT
 	setflag FLAG_DEFEATED_MAUVILLE_GYM
-	setflag FLAG_BADGE03_GET
+	setflag FLAG_BADGE01_GET
 	addvar VAR_PETALBURG_GYM_STATE, 1
-	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
+	call_if_eq VAR_PETALBURG_GYM_STATE, 9, Common_EventScript_ReadyPetalburgGymForBattle
 	setvar VAR_0x8008, 3
 	call Common_EventScript_SetGymTrainers
 	special MauvilleGymDeactivatePuzzle
@@ -109,6 +109,10 @@ MauvilleCity_Gym_EventScript_WattsonDefeated::
 	closemessage
 	delay 30
 	setflag FLAG_ENABLE_WATTSON_MATCH_CALL
+	setvar VAR_RUSTURF_TUNNEL_STATE, 2
+	clearflag FLAG_HIDE_ROUTE_116_MR_BRINEY
+	clearflag FLAG_HIDE_RUSTURF_TUNNEL_PEEKO
+	clearflag FLAG_HIDE_RUSTURF_TUNNEL_AQUA_GRUNT
 	release
 	end
 
@@ -285,7 +289,7 @@ MauvilleCity_Gym_Text_KirkPostBattle:
 	.string "whoa-yeah!$"
 
 MauvilleCity_Gym_Text_ShawnIntro:
-	.string "I trained under WATTSON!\n"
+	.string "I trained under THOMAS!\n"
 	.string "There ain't no way I'll lose easily!$"
 
 MauvilleCity_Gym_Text_ShawnDefeat:
@@ -317,7 +321,7 @@ MauvilleCity_Gym_Text_VivianDefeat:
 
 MauvilleCity_Gym_Text_VivianPostBattle:
 	.string "I've heard that MAUVILLE was founded\n"
-	.string "by WATTSON.\p"
+	.string "by THOMAS.\p"
 	.string "He was a TRAINER long before we\n"
 	.string "became TRAINERS.\l"
 	.string "He must know all sorts of things!$"
@@ -330,21 +334,21 @@ MauvilleCity_Gym_Text_AngeloDefeat:
 	.string "My eyes are frazzled…$"
 
 MauvilleCity_Gym_Text_AngeloPostBattle:
-	.string "MAUVILLE GYM's WATTSON has a shiny\n"
+	.string "MAUVILLE GYM's THOMAS has a shiny\n"
 	.string "forehead. It makes me happy!$"
 
 MauvilleCity_Gym_Text_WattsonIntro:
-	.string "I've given up on my plans to convert\n"
-	.string "the city, I have.\p"
+	.string "I've found a new role as GYM\n"
+	.string "LEADER.\p"
 	.string "And so, I put my time into making\n"
-	.string "door traps in my GYM.\p"
+	.string "my GYM as strong as possible\p"
 	.string "Oh? Now, what are you doing here?\p"
 	.string "What's that? You say you've gotten\n"
-	.string "past all my rigged doors?\p"
+	.string "through all the trainers?\p"
 	.string "Wahahahah!\n"
 	.string "Now, that is amusing!\p"
-	.string "Then, I, WATTSON, the LEADER of\n"
-	.string "MAUVILLE GYM, shall electrify you!$"
+	.string "Then, I, THOMAS, the LEADER of\n"
+	.string "COLLEGE STATION, shall electrify you!$"
 
 MauvilleCity_Gym_Text_WattsonDefeat:
 	.string "Wahahahah!\n"
@@ -354,7 +358,7 @@ MauvilleCity_Gym_Text_WattsonDefeat:
 
 MauvilleCity_Gym_Text_ReceivedDynamoBadge:
 	.string "{PLAYER} received the DYNAMO BADGE\n"
-	.string "from WATTSON.$"
+	.string "from THOMAS.$"
 
 MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis:
 	.string "With the DYNAMO BADGE, POKéMON can\n"
@@ -371,7 +375,7 @@ MauvilleCity_Gym_Text_ExplainShockWave:
 	.string "… … … … … …$"
 
 MauvilleCity_Gym_Text_RegisteredWattson:
-	.string "Registered GYM LEADER WATTSON\n"
+	.string "Registered GYM LEADER THOMAS\n"
 	.string "in the POKéNAV.$"
 
 MauvilleCity_Gym_Text_WattsonPostBattle:

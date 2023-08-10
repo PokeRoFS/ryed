@@ -800,3 +800,14 @@ DewfordTown_Text_YeahDefinitionOfInRightNow:
 	.string "Yeah, absolutely right!\p"
 	.string "“{STR_VAR_1}” is the\n"
 	.string "definition of “in” right now.$"
+
+DewfordTown_EventScript_Sheyenne::
+	lockall
+	msgbox DewfordTown_Text_Sheyenne MSGBOX_DEFAULT
+	releaseall
+
+DewfordTown_Text_Sheyenne:
+	.string "Hey! Landry is a little busy\p"
+	.string "right now...\n"
+	.string "I think he was showing Ross\p"
+	.string "something in the cave up north$"

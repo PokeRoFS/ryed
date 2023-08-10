@@ -20,7 +20,7 @@
     },
     {
       "map": "MAP_ROUTE110",
-      "offset": -60,
+      "offset": -7,
       "direction": "right"
     }
   ],
@@ -248,8 +248,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
-      "x": 36,
-      "y": 6,
+      "x": 33,
+      "y": 7,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
       "movement_range_x": 1,
@@ -261,10 +261,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
-      "x": 36,
-      "y": 13,
+      "x": 30,
+      "y": 14,
       "elevation": 1,
-      "movement_type": "MOVEMENT_TYPE_WALK_UP_AND_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 1,
       "movement_range_y": 3,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -284,6 +284,32 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route103_EventScript_ItemPPUp",
       "flag": "FLAG_ITEM_ROUTE_103_PP_UP"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LINK_MAY",
+      "x": 33,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route103_EventScript_SheyenneMeetWesley",
+      "flag": "FLAG_OPEN_ROUTE_103"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_STEVEN",
+      "x": 33,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route103_EventScript_RossMeetWesley",
+      "flag": "FLAG_OPEN_ROUTE_103"
     }
   ],
   "warp_events": [
@@ -296,7 +322,15 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_OLDALE_TOWN_STATE",
+      "var_value": "0",
+      "script": "Route103_EventScript_PreventLeaving"
+    }
   ],
   "bg_events": [
     {

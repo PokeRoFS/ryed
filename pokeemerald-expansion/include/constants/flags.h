@@ -153,7 +153,7 @@
 #define FLAG_RECEIVED_AMULET_COIN            0x85
 #define FLAG_PENDING_DAYCARE_EGG             0x86
 #define FLAG_THANKED_FOR_PLAYING_WITH_WALLY  0x87
-#define FLAG_ENABLE_FIRST_WALLY_POKENAV_CALL 0x88 // Set after defeating Wally outside Mauville Gym. Will activate a call later to register Wally.
+#define FLAG_ENABLE_FIRST_WALLY_POKENAV_CALL 0x88 // Set after defeating TRUEMAN outside Mauville Gym. Will activate a call later to register TRUEMAN.
 #define FLAG_RECEIVED_HM01                   0x89
 #define FLAG_SCOTT_CALL_FORTREE_GYM          0x8A // Triggers call from Scott after defeating Winona
 #define FLAG_DEFEATED_EVIL_TEAM_MT_CHIMNEY   0x8B
@@ -1656,5 +1656,10 @@
 #define FLAG_HIDE_BROTHER_IN_OLDALE             0x509
 #define FLAG_ITEM_ROUTE_102_NUGGET              0x50A
 #define FLAG_ENABLE_MOM_CALL                    0x50B
+#define FLAG_OPEN_ROUTE_103                     0x50C
+#define FLAG_REMOVE_BIGFISHERMAN                0x50D
+#define FLAG_DEFEATED_BROTHER_OLDALE            0x50E
+#define FLAG_SHOP_IN_MAUVILLE                   0x50F
+#define FLAG_HIDE_WOMAN_RUSTURF                 0x510
 
 #endif // GUARD_CONSTANTS_FLAGS_H

@@ -77,12 +77,12 @@ VictoryRoad_1F_Movement_WallyApproachPlayer2:
 	walk_up
 	step_end
 
-@ This Wally appears near the entrance once his battle is triggered and remains there until the Hall of Fame is entered
+@ This TRUEMAN appears near the entrance once his battle is triggered and remains there until the Hall of Fame is entered
 VictoryRoad_1F_EventScript_EntranceWally::
 	msgbox VictoryRoad_1F_Text_WallyPostEntranceBattle, MSGBOX_NPC
 	end
 
-@ This Wally appears and remains at the exit after the Hall of Fame is entered
+@ This TRUEMAN appears and remains at the exit after the Hall of Fame is entered
 VictoryRoad_1F_EventScript_ExitWally::
 	trainerbattle_single TRAINER_WALLY_VR_2, VictoryRoad_1F_Text_WallyIntro, VictoryRoad_1F_Text_WallyDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
@@ -121,7 +121,7 @@ VictoryRoad_1F_EventScript_Katelynn::
 	end
 
 VictoryRoad_1F_Text_WallyNotGoingToLoseAnymore:
-	.string "WALLY: Hi! {PLAYER}!\p"
+	.string "TRUEMAN: Hi! {PLAYER}!\p"
 	.string "I bet you're surprised to see me here!\p"
 	.string "I made it all the way here, and it's\n"
 	.string "all thanks to you!\p"
@@ -137,12 +137,12 @@ VictoryRoad_1F_Text_WallyEntranceDefeat:
 	.string "{PLAYER}, you are strong, after all!$"
 
 VictoryRoad_1F_Text_WallyPostEntranceBattle:
-	.string "WALLY: I couldn't beat you today,\n"
+	.string "TRUEMAN: I couldn't beat you today,\n"
 	.string "{PLAYER}, but one of these days, I'll\l"
 	.string "catch up to you!$"
 
 VictoryRoad_1F_Text_WallyIntro:
-	.string "WALLY: Hi! {PLAYER}!\p"
+	.string "TRUEMAN: Hi! {PLAYER}!\p"
 	.string "I've gotten stronger since that last\n"
 	.string "time! I wanted to show you, {PLAYER}!\p"
 	.string "Okay… Here I come!$"
@@ -152,7 +152,7 @@ VictoryRoad_1F_Text_WallyDefeat:
 	.string "{PLAYER}, you are strong, after all!$"
 
 VictoryRoad_1F_Text_WallyPostBattle:
-	.string "WALLY: I couldn't beat you this time,\n"
+	.string "TRUEMAN: I couldn't beat you this time,\n"
 	.string "too… But one of these days, {PLAYER},\l"
 	.string "I'm going to catch up to you…\p"
 	.string "And challenge the POKéMON LEAGUE!$"

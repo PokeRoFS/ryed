@@ -355,3 +355,35 @@ Route103_Text_RouteSign:
 	.string "{DOWN_ARROW} OLDALE TOWN$"
 
 `
+
+script Route103_EventScript_PreventLeaving {
+	lockall
+	msgbox("I feel like I should meet up with\lsome more people before leaving.\n")
+	applymovement(OBJ_EVENT_ID_PLAYER, MOVE_LEFT)
+	waitmovement(0)
+	releaseall
+}
+
+script Route103_EventScript_RossMeetWesley {
+	lockall
+	applymovement(22, FACE_LEFT)
+	waitmovement(0)
+	msgbox("Ross: Hey, I heard Wesley is looking\lfor you in Dallas.\n")
+	releaseall
+}
+
+script Route103_EventScript_SheyenneMeetWesley {
+	lockall
+	applymovement(21, FACE_LEFT)
+	waitmovement(0)
+	msgbox("Sheyenne: Hey, I heard Wesley is looking\lfor you in Dallas.\n")
+	releaseall
+}
+
+movement MOVE_LEFT {
+	walk_left
+}
+
+movement FACE_LEFT {
+	face_left
+}

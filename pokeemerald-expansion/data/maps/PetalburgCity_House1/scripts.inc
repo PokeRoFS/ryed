@@ -3,6 +3,8 @@ PetalburgCity_House1_MapScripts::
 
 PetalburgCity_House1_EventScript_Man::
 	msgbox PetalburgCity_House1_Text_TravelingIsWonderful, MSGBOX_NPC
+	giveitem ITEM_RARE_CANDY, 99
+	msgbox PetalburgCity_House1_Text_HopeThisHelps, MSGBOX_NPC
 	end
 
 PetalburgCity_House1_EventScript_Woman::
@@ -12,7 +14,8 @@ PetalburgCity_House1_EventScript_Woman::
 PetalburgCity_House1_Text_TravelingIsWonderful:
 	.string "Traveling is wonderful!\p"
 	.string "When I was young, I roamed the seas\n"
-	.string "and the mountains!$"
+	.string "and the mountains!\n"
+	.string "For you to have as great of an\ladventure as me, here ya go!$"
 
 PetalburgCity_House1_Text_GoOnAdventure:
 	.string "Sigh…\p"
@@ -25,3 +28,6 @@ PetalburgCity_House1_Text_GoOnAdventure:
 	.string "And, sometimes, even get a little\n"
 	.string "homesick…\p"
 	.string "It must be fabulous to travel!$"
+
+PetalburgCity_House1_Text_HopeThisHelps:
+	.string "Hope this helps with your adventure!$"

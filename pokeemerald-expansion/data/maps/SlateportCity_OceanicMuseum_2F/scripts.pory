@@ -80,8 +80,9 @@ SlateportCity_OceanicMuseum_2F_EventScript_CaptStern::
 	playfanfare MUS_HEAL
 	waitfanfare
 	special HealPlayerParty
+	clearflag FLAG_HIDE_ROUTE_109_MR_BRINEY
+	clearflag FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT
 	removeobject LOCALID_CAPT_STERN
-	setflag FLAG_HIDE_ROUTE_110_TEAM_AQUA
 	call_if_eq VAR_REGISTER_BIRCH_STATE, 0, SlateportCity_OceanicMuseum_2F_EventScript_ReadyRegisterBirch
 	setflag FLAG_DELIVERED_DEVON_GOODS
 	clearflag FLAG_HIDE_ROUTE_116_DEVON_EMPLOYEE
@@ -319,31 +320,27 @@ SlateportCity_OceanicMuseum_2F_Text_MeddlingKid:
 SlateportCity_OceanicMuseum_2F_Text_CameToSeeWhatsTakingSoLong:
 	.string "I came to see what was taking so\n"
 	.string "long to snatch some parts, and you\l"
-	.string "simps are held up by a mere child?$"
+	.string "simps are held up by my boy?$"
 
 SlateportCity_OceanicMuseum_2F_Text_ArchieWarning:
-	.string "We are TEAM AQUA,\n"
-	.string "and we love the sea!\p"
-	.string "And I am TEAM AQUA's leader,\n"
-	.string "ARCHIE!\p"
+	.string "We are TEAM RIGHT,\n"
+	.string "and we hate taxes!\p"
+	.string "And I am TEAM RIGHT's leader,\n"
+	.string "TODD!\p"
 	.string "What makes you interfere with us?\p"
 	.string "…No! You can't be!\n"
-	.string "You're not one of TEAM MAGMA?\p"
+	.string "You're not working with your mother?\p"
 	.string "Wait, that can't be right.\n"
-	.string "You're not dressed for the part.\p"
-	.string "… … … … … …\n"
-	.string "… … … … … …\p"
-	.string "POKéMON, people… All life depends on\n"
-	.string "the sea.\p"
-	.string "So, TEAM AQUA is dedicated to\n"
-	.string "the expansion of the sea.\p"
+	.string "POKéMON, people...\n"
+	.string "So, TEAM RIGHT is dedicated to\n"
+	.string "removing taxes.\p"
 	.string "Don't you agree? What we are doing\n"
 	.string "is a magnificent undertaking.\p"
 	.string "Ah, fine…\n"
 	.string "You're still too young to understand\l"
 	.string "our noble objective.\p"
-	.string "But, I warn you, don't even consider\n"
-	.string "interfering with our plans again.\p"
+	.string "When you get a real job,\n"
+	.string "you'll understand the pain...\p"
 	.string "The consequences will cost you\n"
 	.string "dearly!\p"
 	.string "And don't you forget it!$"
@@ -369,7 +366,7 @@ SlateportCity_OceanicMuseum_2F_Text_SternIveGotToGo:
 SlateportCity_OceanicMuseum_2F_Text_RemindsMeOfAbandonedShip:
 	.string "I saw a model of a ship here.\p"
 	.string "It reminded me of the ABANDONED SHIP\n"
-	.string "near DEWFORD TOWN…$"
+	.string "near HAWAII…$"
 
 SlateportCity_OceanicMuseum_2F_Text_DontRunInMuseum:
 	.string "Don't you dare run around inside\n"

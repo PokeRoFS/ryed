@@ -388,6 +388,7 @@ OldaleTown_EventScript_AfterBrotherBattle::
 	msgbox OldaleTown_EventScript_AfterBrotherBattle_Text_3
 	message RustboroCity_DevonCorp_3F_Text_ReceivedPokenav
 	waitfanfare
+	setflag FLAG_DEFEATED_BROTHER_OLDALE
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_RECEIVED_POKENAV
 	setflag FLAG_ENABLE_MOM_CALL

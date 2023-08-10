@@ -604,18 +604,18 @@ static void Cmd_finishturn(void);
 static void Cmd_trainerslideout(void);
 const u16 sLevelCapFlags[NUM_SOFT_CAPS] = 
 {
-    FLAG_BADGE01_GET, FLAG_BADGE02_GET, FLAG_BADGE03_GET, FLAG_BADGE04_GET,
+    FLAG_DEFEATED_BROTHER_OLDALE, FLAG_BADGE01_GET, FLAG_HIDE_GRANITE_CAVE_STEVEN, FLAG_BADGE02_GET, FLAG_BADGE03_GET, FLAG_BADGE04_GET,
     FLAG_BADGE05_GET, FLAG_BADGE06_GET, FLAG_BADGE07_GET, FLAG_BADGE08_GET,
     FLAG_DEFEATED_ELITE_4_SIDNEY, FLAG_DEFEATED_ELITE_4_PHOEBE, FLAG_DEFEATED_ELITE_4_GLACIA, FLAG_DEFEATED_ELITE_4_DRAKE,
     FLAG_IS_CHAMPION, FLAG_DEFEATED_METEOR_FALLS_STEVEN,
 };
-const u16 sLevelCaps[NUM_SOFT_CAPS] = {14, 22, 30, 40, 50, 60, 70, 80, 84, 86, 88, 90, 93, 97};
+const u16 sLevelCaps[NUM_SOFT_CAPS] = {11, 15, 22, 32, 38, 45, 54, 62, 70, 80, 84, 86, 88, 90, 93, 97};
 const double sRelativePartyScaling[16] =
 {
-    3.00, 2.75, 2.50, 2.33, 2.25,
-    2.00, 1.80, 1.70, 1.60, 1.50,
-    1.40, 1.30, 1.20, 1.10, 1.00,
-    0.95,
+    6.00, 5.75, 5.50, 5.33, 5.25,
+    5.00, 4.80, 4.70, 4.60, 4.50,
+    4.20, 3.90, 3.60, 3.10, 3.00,
+    2.50,
 };
 static void Cmd_settelekinesis(void);
 static void Cmd_swapstatstages(void);
@@ -4232,12 +4232,12 @@ double GetPkmnExpMultiplier(u8 level)
     // multiply the usual exp yield by the party level multiplier
     avgDiff = level - GetTeamLevel();
 
-    if (avgDiff >= 12)
-        avgDiff = 12;
-    else if (avgDiff <= -14)
-        avgDiff = -14;
+    if (avgDiff >= 1)
+        avgDiff = 0;
+    else if (avgDiff <= -15)
+        avgDiff = -15;
 
-    avgDiff += 14;
+    avgDiff += 15;
 
     return lvlCapMultiplier * sRelativePartyScaling[avgDiff];
 }

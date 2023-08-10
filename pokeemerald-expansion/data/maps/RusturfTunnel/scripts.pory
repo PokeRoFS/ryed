@@ -4,6 +4,7 @@ raw `
 .set LOCALID_GRUNT, 6
 .set LOCALID_PEEKO, 7
 .equ LOCALID_WANDA, 10
+.set LOCALID_WOMAN, 11
 
 RusturfTunnel_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, RusturfTunnel_OnTransition
@@ -20,8 +21,8 @@ RusturfTunnel_OnTransition:
 	end
 
 RusturfTunnel_EventScript_SetAquaGruntAndPeekoPos::
-	setobjectxyperm LOCALID_PEEKO, 13, 4
-	setobjectxyperm LOCALID_GRUNT, 13, 5
+	setobjectxyperm LOCALID_PEEKO, 30, 7
+	setobjectxyperm LOCALID_GRUNT, 29, 7
 	return
 
 RusturfTunnel_EventScript_Wanda::
@@ -288,7 +289,7 @@ RusturfTunnel_EventScript_AquaGruntBackUp::
 
 RusturfTunnel_Movement_GruntAndPeekoBackUp:
 	lock_facing_direction
-	walk_right
+	walk_up
 	unlock_facing_direction
 	step_end
 
@@ -343,13 +344,49 @@ RusturfTunnel_EventScript_Grunt::
 	setvar VAR_RUSTBORO_CITY_STATE, 4
 	setvar VAR_BRINEY_HOUSE_STATE, 1
 	setflag FLAG_HIDE_ROUTE_116_MR_BRINEY
+	setflag FLAG_REMOVE_BIGFISHERMAN
+	applymovement LOCALID_WOMAN, RusturfTunnel_Movement_Woman_Approaches
+	waitmovement 0
+	msgbox RusturfTunnel_Text_ComeByMyShop, MSGBOX_DEFAULT
+	applymovement LOCALID_WOMAN, RusturfTunnel_Movement_Woman_Exits
+	waitmovement 0
+	clearflag FLAG_SHOP_IN_MAUVILLE
+	removeobject LOCALID_WOMAN
+	setflag FLAG_HIDE_WOMAN_RUSTURF
 	release
 	end
 
+RusturfTunnel_Movement_Woman_Approaches:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	face_up
+
+RusturfTunnel_Text_ComeByMyShop:
+	.string "LADY: Wow, you sure did a lot\l"
+	.string "for that man.\p"
+	.string "Saving his Wingull\l"
+	.string "shows a lot of courage!\p"
+	.string "You should come by my shop\l"
+	.string "later!\n"
+	.string "I'm sure it will prove useful\l"
+	.string "for your journey!$"
+
+RusturfTunnel_Movement_Woman_Exits:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
 RusturfTunnel_Movement_PushPlayerAsideForGrunt:
-	face_down
+	face_left
 	lock_facing_direction
-	walk_up
+	walk_right
 	unlock_facing_direction
 	walk_in_place_faster_left
 	step_end
@@ -360,39 +397,45 @@ RusturfTunnel_Movement_PlayerMoveAsideForBriney:
 	step_end
 
 RusturfTunnel_Movement_GruntEscape:
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
 	step_end
 
 RusturfTunnel_Movement_BrineyApproachPeeko1:
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	face_right
 	step_end
 
 RusturfTunnel_Movement_BrineyExit:
 	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	step_end
 
 RusturfTunnel_Movement_PlayerWatchBrineyExit:
@@ -409,14 +452,17 @@ RusturfTunnel_Movement_BrineyApproachPeeko2:
 
 RusturfTunnel_Movement_PeekoExit:
 	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	step_end
 
 RusturfTunnel_EventScript_Mike::
@@ -468,7 +514,7 @@ RusturfTunnel_Text_ThankYouLetsGoHomePeeko:
 	.string "Now, if there's anything that troubles\n"
 	.string "you, don't hesitate to tell me!\p"
 	.string "You can usually find me in my cottage\n"
-	.string "by the sea near PETALBURG WOODS.\p"
+	.string "by the sea near the WOODS.\p"
 	.string "Come, PEEKO, we should make our way\n"
 	.string "home.\p"
 	.string "PEEKO: Pihyoh!$"

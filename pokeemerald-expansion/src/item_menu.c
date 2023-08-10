@@ -2323,7 +2323,7 @@ void DoWallyTutorialBagMenu(void)
 }
 
 #define tTimer data[8]
-#define WALLY_BAG_DELAY 102 // The number of frames between each action Wally takes in the bag
+#define WALLY_BAG_DELAY 102 // The number of frames between each action TRUEMAN takes in the bag
 
 static void Task_WallyTutorialBagMenu(u8 taskId)
 {

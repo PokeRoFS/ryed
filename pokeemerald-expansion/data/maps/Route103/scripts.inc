@@ -352,3 +352,47 @@ Route103_Text_ShortcutToOldale:
 Route103_Text_RouteSign:
 	.string "ROUTE 103\n"
 	.string "{DOWN_ARROW} OLDALE TOWN$"
+
+Route103_EventScript_PreventLeaving::
+	lockall
+	msgbox Route103_EventScript_PreventLeaving_Text_0
+	applymovement OBJ_EVENT_ID_PLAYER, MOVE_LEFT
+	waitmovement 0
+	releaseall
+	return
+
+
+Route103_EventScript_RossMeetWesley::
+	lockall
+	applymovement 22, FACE_LEFT
+	waitmovement 0
+	msgbox Route103_EventScript_RossMeetWesley_Text_0
+	releaseall
+	return
+
+
+Route103_EventScript_SheyenneMeetWesley::
+	lockall
+	applymovement 21, FACE_LEFT
+	waitmovement 0
+	msgbox Route103_EventScript_SheyenneMeetWesley_Text_0
+	releaseall
+	return
+
+
+MOVE_LEFT:
+	walk_left
+	step_end
+
+FACE_LEFT:
+	face_left
+	step_end
+
+Route103_EventScript_PreventLeaving_Text_0:
+	.string "I feel like I should meet up with\lsome more people before leaving.\n$"
+
+Route103_EventScript_RossMeetWesley_Text_0:
+	.string "Ross: Hey, I heard Wesley is looking\lfor you in Dallas.\n$"
+
+Route103_EventScript_SheyenneMeetWesley_Text_0:
+	.string "Sheyenne: Hey, I heard Wesley is looking\lfor you in Dallas.\n$"

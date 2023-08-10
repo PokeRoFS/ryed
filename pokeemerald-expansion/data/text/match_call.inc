@@ -2068,7 +2068,7 @@ MatchCall_Text_Roxanne4::
 	.string "is a matter of pride.$"
 
 MatchCall_Text_Brawly1::
-	.string "BRAWLY: Hey, there, {PLAYER}{KUN}!\p"
+	.string "LANDRY: Hey, there, {PLAYER}{KUN}!\p"
 	.string "I learned a lot from the battle we\n"
 	.string "had together.\p"
 	.string "I intend to do my training over,\n"
@@ -2079,7 +2079,7 @@ MatchCall_Text_Brawly1::
 	.string "I want you to challenge us again.$"
 
 MatchCall_Text_Brawly2::
-	.string "BRAWLY: Hey, {PLAYER}{KUN}!\n"
+	.string "LANDRY: Hey, {PLAYER}{KUN}!\n"
 	.string "Congratulations!\p"
 	.string "Word about your exploits arrived\n"
 	.string "on tidal winds!\p"
@@ -2091,13 +2091,13 @@ MatchCall_Text_Brawly2::
 	.string "I want you to challenge us again.$"
 
 MatchCall_Text_Brawly3::
-	.string "BRAWLY: Hey, {PLAYER}{KUN}!\n"
+	.string "LANDRY: Hey, {PLAYER}{KUN}!\n"
 	.string "My GYM's ready for action!\p"
 	.string "Come back to DEWFORD anytime\n"
 	.string "for another challenge!$"
 
 MatchCall_Text_Brawly4::
-	.string "BRAWLY: {PLAYER}{KUN}, I don't think\n"
+	.string "LANDRY: {PLAYER}{KUN}, I don't think\n"
 	.string "I'll ever get bored of battling you!$"
 
 MatchCall_Text_Wattson1::
@@ -2587,19 +2587,19 @@ MatchCall_Text_Brendan15::
 	.string "envious!$"
 
 MatchCall_Text_Wally1::
-	.string "WALLY: Oh, {PLAYER}!\p"
+	.string "TRUEMAN: Oh, {PLAYER}!\p"
 	.string "I've been getting healthier and\n"
 	.string "more physically fit.\p"
 	.string "I hope I can become a TRAINER like\n"
 	.string "you soon, {PLAYER}!$"
 
 MatchCall_Text_Wally2::
-	.string "WALLY: {PLAYER}, hello!\p"
+	.string "TRUEMAN: {PLAYER}, hello!\p"
 	.string "After RUSTURF TUNNEL went\n"
 	.string "through, WANDA's been very happy!$"
 
 MatchCall_Text_Wally3::
-	.string "WALLY: Oh, {PLAYER}!\p"
+	.string "TRUEMAN: Oh, {PLAYER}!\p"
 	.string "I… I left my uncle's place in\n"
 	.string "VERDANTURF without telling anyone.\p"
 	.string "I wonder if he's furious with me…\p"
@@ -2607,8 +2607,8 @@ MatchCall_Text_Wally3::
 	.string "I feel, don't you?$"
 
 MatchCall_Text_Wally4::
-	.string "WALLY: {PLAYER}?\n"
-	.string "It's me, WALLY!\p"
+	.string "TRUEMAN: {PLAYER}?\n"
+	.string "It's me, TRUEMAN\p"
 	.string "The world of TRAINERS is amazing!\p"
 	.string "When I have my POKéMON with me,\n"
 	.string "all sorts of people say hi!\p"
@@ -2616,7 +2616,7 @@ MatchCall_Text_Wally4::
 	.string "connected through POKéMON!$"
 
 MatchCall_Text_Wally5::
-	.string "WALLY: {PLAYER}? It's awesome!\n"
+	.string "TRUEMAN: {PLAYER}? It's awesome!\n"
 	.string "That RALTS we caught together?\l"
 	.string "It evolved, {PLAYER}!\p"
 	.string "Maybe I'm talented…\p"
@@ -2632,7 +2632,7 @@ MatchCall_Text_Wally6::
 	.string "the POKéNAV's service area…$"
 
 MatchCall_Text_Wally7::
-	.string "WALLY: Oh, {PLAYER}!\p"
+	.string "TRUEMAN: Oh, {PLAYER}!\p"
 	.string "Before I met you, I hardly ever\n"
 	.string "left my house…\p"
 	.string "But now, I'm on an adventure with\n"
@@ -2774,7 +2774,7 @@ MatchCall_Text_Norman9::
 	.string "How much higher will you soar?$"
 
 MatchCall_Text_Steven1::
-	.string "STEVEN: Hi, {PLAYER}{KUN}!\p"
+	.string "ROSS: Hi, {PLAYER}{KUN}!\p"
 	.string "Have you been to MAUVILLE\n"
 	.string "already?\p"
 	.string "You should visit the BIKE SHOP\n"
@@ -2785,14 +2785,14 @@ MatchCall_Text_Steven1::
 	.string "there.$"
 
 MatchCall_Text_Steven2::
-	.string "STEVEN: Hi, {PLAYER}{KUN}!\p"
+	.string "ROSS: Hi, {PLAYER}{KUN}!\p"
 	.string "I've met a lot of different\n"
 	.string "TRAINERS so far.\p"
 	.string "But you're one of a kind.\n"
 	.string "You're not like anyone else.$"
 
 MatchCall_Text_Steven3::
-	.string "STEVEN: Hi, {PLAYER}{KUN}!\p"
+	.string "ROSS: Hi, {PLAYER}{KUN}!\p"
 	.string "When you're on an adventure with\n"
 	.string "your POKéMON, what do you think?\p"
 	.string "Do you consider them to be strong\n"
@@ -2803,7 +2803,7 @@ MatchCall_Text_Steven3::
 	.string "adventure's significance changes.$"
 
 MatchCall_Text_Steven4::
-	.string "STEVEN: Hello?\n"
+	.string "ROSS: Hello?\n"
 	.string "{PLAYER}{KUN}?\p"
 	.string "I'm involved in a spot of trouble\n"
 	.string "at the SPACE CENTER.\p"
@@ -2811,7 +2811,7 @@ MatchCall_Text_Steven4::
 	.string "Bye!$"
 
 MatchCall_Text_Steven5::
-	.string "STEVEN: Oh!\n"
+	.string "ROSS: Oh!\n"
 	.string "{PLAYER}{KUN}!\p"
 	.string "There's no need to talk.\n"
 	.string "It's past time for talking.\p"
@@ -2824,7 +2824,7 @@ MatchCall_Text_Steven6::
 	.string "the call…$"
 
 MatchCall_Text_Steven7::
-	.string "STEVEN: {PLAYER}{KUN}… Congratulations\n"
+	.string "ROSS: {PLAYER}{KUN}… Congratulations\n"
 	.string "for entering the HALL OF FAME.\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
@@ -2900,7 +2900,7 @@ MatchCall_Text_MrStone4::
 MatchCall_Text_MrStone5::
 	.string "MR. STONE: Hello, hello, {PLAYER}{KUN}!\p"
 	.string "I heard from someone in PETALBURG\n"
-	.string "that you're NORMAN's child!\p"
+	.string "that you're WES's child!\p"
 	.string "No wonder you're such a capable\n"
 	.string "being!$"
 
